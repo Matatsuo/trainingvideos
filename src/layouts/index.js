@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.css'
+import '../styles/main.scss';
 
 const Header = () => (
   <header
@@ -48,7 +48,6 @@ const TemplateWrapper = ({ children }) => (
         textAlign: 'center',
         height: '90vh',
         alignItems: 'center',
-        width: '50vw',
     display: 'flex',
     justifyContent: 'center',
       }}
