@@ -7,7 +7,8 @@ media_folder: "/src/resources"
 collections:
   - name: "Pages"
     label: "Pages"
-    folder: "src/pages"
+    folder: "src/pages/clients"
+    slug: "{{slug}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
