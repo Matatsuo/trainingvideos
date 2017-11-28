@@ -15,20 +15,12 @@ const TemplateWrapper = ({ children }) => (
         { name: "description", content: "Sample" },
         { name: "keywords", content: "sample, something" }
       ]}
+      script={[
+        { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
+      ]}
     />
     <Header />
-    <main
-      style={{
-        margin: "0 auto",
-        textAlign: "center",
-        minHeight: "80vh",
-        alignItems: "center",
-        display: "flex",
-        justifyContent: "center"
-      }}
-    >
-      {children()}
-    </main>
+    <main>{children()}</main>
   </div>
 );
 

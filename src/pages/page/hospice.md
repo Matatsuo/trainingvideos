@@ -7,7 +7,7 @@ videos:
         link: "https://www.youtube-nocookie.com/embed/jI0_QdMBF6M?rel=0"
     - video:
         title: Administration
-        link: "https://www.youtube-nocookie.com/embed/RLwc-DNmtT0?rel=0"
+        link: "https://www.youtube-nocookie.com/embed/17mZw6GLir4?rel=0" 
     - video:
         title: PRN, Resupply, Graphs
         link: "https://www.youtube-nocookie.com/embed/N8IYyhev4oo?rel=0"
