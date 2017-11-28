@@ -2,15 +2,14 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "/static/images"
+media_folder: "/src/resources"
 
 collections:
   - name: "Pages"
     label: "Pages"
-    files:
-      - file: "src/pages/index.md"
-        label: "Front Page"
-        name: "frontpage"
+    folder: "src/pages"
+    create: true
         fields:
-          - {label: "Landing", name: "landing", widget: "object", fields: [{label: Heading, name: heading, widget: "string"}, {label: "Subheading", name: "subheading", widget: "string"}, {label: "Background", name: "background", widget: "string"}]}
-          - {label: "Main", name: "main", widget: "object", fields: [{label: "Section", name: "section", widget: "list", fields: [{label: "Heading", name: "heading", widget: "string"}, {label: "Subheading", name: "subheading", widget: "text"}, {label: "Background", name: "background", widget: "string"}, {label: "Items", name: "items", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Text", name: "text", widget: "markdown"}]}]}]}
+          - {label: "Title", name: "title", widget: "string"}, 
+          - {label: "Path", name: "path", widget: "string"},
+          - {label: "Videos", name: "videos", widget: "object", fields: [{label: "Video", name: "video", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}]}
