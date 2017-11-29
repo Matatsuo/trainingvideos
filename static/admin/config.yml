@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  branch: master
 
 media_folder: "src/resources/images"
 public_folder: "images"
@@ -8,14 +7,9 @@ public_folder: "images"
 collections:
   - name: "pages"
     label: "Pages"
-    files:
-      - file: "src/pages/hospice.md"
-        label: "Hospice"
-        name: "hospice"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
-      - file: "src/pages/resthome.md"
-        label: "Rest Home"
-        name: "resthome"
-        fields:
-          - {label: "Title", name: "title", widget: "string"}
+    folder: "src/pages"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Videos", name: "videos", widget: "object", fields: [{label: "Video", name: "video", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}]}

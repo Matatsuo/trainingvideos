@@ -1,6 +1,6 @@
 ---
 path: '/hospice'
-title: Hospice
+heading: Hospice
 videos:
     - video:
         title: Login and Filter

@@ -43,7 +43,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         path
-        title
+        heading
         videos {
           video {
             title

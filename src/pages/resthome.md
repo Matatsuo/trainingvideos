@@ -1,6 +1,6 @@
 ---
 path: '/resthome'
-title: Rest Home Facility
+heading: Rest Home Facility
 videos:
     - video:
         title: Login and Filter

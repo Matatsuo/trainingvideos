@@ -35,7 +35,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             path
-            title
+            heading
             videos {
               video {
                 title
