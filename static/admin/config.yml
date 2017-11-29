@@ -6,9 +6,12 @@ media_folder: "/src/resources/images"
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "/src/pages/clients"
     create: true
-    fields:
-      - {label: "Path", name: "path", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Videos", name: "videos", widget: "list", fields: [{label: "Video", name: "video", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}]}
+    files:
+      - file: "src/pages/clients/hospice.md"
+        label: "Hospice"
+        name: "hospice"
+        fields:
+        - {label: "Path", name: "path", widget: "string"}
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Videos", name: "videos", widget: "list", fields: [{label: "Video", name: "video", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}]}
