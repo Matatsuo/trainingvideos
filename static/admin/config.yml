@@ -14,10 +14,8 @@ collections:
         name: "hospice"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Path", name: "path", widget: "string"}
-      - file: "src/pages/hospice.md"
+      - file: "src/pages/resthome.md"
         label: "Rest Home"
         name: "resthome"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Path", name: "path", widget: "string"}
