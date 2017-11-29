@@ -1,4 +1,0 @@
----
-path: '/front'
-heading: Front
----
