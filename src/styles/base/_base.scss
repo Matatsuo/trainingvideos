@@ -647,6 +647,7 @@ pre tt:after {
     li {
       margin-right: 1vw;
       display: inline-block;
+      margin-bottom: 0;
     }
   }
 
@@ -656,6 +657,10 @@ pre tt:after {
     transition: color 0.3s;
 
     &:hover {
+      color: #ff1200;
+    }
+
+    &:active {
       color: #ff1200;
     }
   }

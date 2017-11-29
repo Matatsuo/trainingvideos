@@ -1,14 +1,13 @@
 backend:
   name: git-gateway
-  branch: master
 
-media_folder: "/src/resources"
+media_folder: "src/resources/images"
+public_folder: "images"
 
 collections:
-  - name: "Pages"
+  - name: "pages"
     label: "Pages"
     folder: "src/pages/clients"
-    slug: "{{slug}}"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}

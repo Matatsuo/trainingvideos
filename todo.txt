@@ -1,0 +1,15 @@
+private restrictions: 
+	robots.txt
+	htaccess
+
+CMS options:
+
+Headless Wordpress + Gatsby - need two domains? static hosted gatsby site queries a wordpress site
+thats also hosted somewhere? Pricey potentially?
+
+(Maybe) Wordpress.com (has REST API built in now so no need for plugin? At least could test
+on .com before .org
+
+Grav
+
+Prismic + Gatsby
