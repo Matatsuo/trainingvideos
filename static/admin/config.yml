@@ -15,11 +15,9 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Path", name: "path", widget: "string"}
-          - {label: "Videos", name: "videos", widget: "object", fields: [{label: "Video", name: "video", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}]}
       - file: "src/pages/hospice.md"
-        label: "Hospice"
-        name: "hospice"
+        label: "Rest Home"
+        name: "resthome"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Path", name: "path", widget: "string"}
-          - {label: "Videos", name: "videos", widget: "object", fields: [{label: "Video", name: "video", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}]}
