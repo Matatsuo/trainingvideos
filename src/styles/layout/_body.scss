@@ -3,6 +3,7 @@
 }
 
 .sidebar {
+  width: 20vw;
   ul {
     list-style: none;
     margin: 0;
@@ -21,4 +22,9 @@
       color: #ff1200;
     }
   }
+}
+
+.content {
+  width: 60vw;
+  text-align: center;
 }
