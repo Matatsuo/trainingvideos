@@ -12,4 +12,4 @@ collections:
     fields:
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Videos", name: "videos", widget: "list", fields: [{label: "Video", name: "video", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}]}
+      - {label: "Videos", name: "videos", widget: "object", fields: [{label: "Video", name: "video", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}]}
