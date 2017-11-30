@@ -3,7 +3,7 @@ import React from 'react';
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
   return (
-    <div className="container">
+    <div className="pageContainer">
       <div className="sidebar">
         <ul>
           {page.frontmatter.videos
@@ -13,11 +13,11 @@ export default function Template({ data }) {
       </div>
 
       <div className="content">
-        <h1 className="pageHeader">{page.frontmatter.title}</h1>
+        {/* <h1 className="pageHeader">{page.frontmatter.heading}</h1> */}
         <div>
           {page.frontmatter.videos
             ? page.frontmatter.videos.map(vid => (
-              <div>
+              <div className="videoContainer">
                 <h2>{vid.video.title}</h2>
                 <iframe
                   className="ytPlayer"

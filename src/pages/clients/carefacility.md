@@ -1,6 +1,6 @@
 ---
-path: '/resthome'
-heading: Rest Home Facility
+path: '/carefacility'
+heading: Care Facility
 videos:
     - video:
         title: Login and Filter
