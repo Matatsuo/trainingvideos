@@ -38,12 +38,7 @@ export const pageQuery = graphql`
           frontmatter {
             path
             heading
-            videos {
-              video {
-                title
-                link
-              }
-            }
+            playlist
           }
         }
       }

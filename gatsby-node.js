@@ -1,9 +1,9 @@
-const path = require("path");
+const path = require('path');
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const pageTemplate = path.resolve("src/templates/page.js");
+  const pageTemplate = path.resolve('src/templates/page.js');
 
   return graphql(`
     {
@@ -13,12 +13,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               path
               heading
-              videos {
-                video {
-                  title
-                  link
-                }
-              }
+              playlist
             }
           }
         }
@@ -33,7 +28,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: pageTemplate,
-        context: {} // additional data can be passed via context
+        context: {}, // additional data can be passed via context
       });
     });
   });
