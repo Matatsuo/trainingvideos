@@ -20,6 +20,14 @@ export default class IndexPage extends React.Component {
         <div>
           <h1 className="pageHeader">Medi-Map Training</h1>
           <p> Under construction, will look prettier soon</p>
+          <p>
+            What I am working on:<ul>
+              <li>
+                Changing video in the playlist will update the active video in the sidebar (change
+                color)
+              </li>
+            </ul>
+          </p>
           <p>Select the relevant training module to begin:</p>
           <div className="customerLinks">
             <Navigation />
