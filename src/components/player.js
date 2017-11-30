@@ -51,13 +51,14 @@ class Player extends Component {
     const vTag = '&v=';
     const videoId = 'N8IYyhev4oo';
     const v = '&index=';
+    const showInfo = '&amp;showinfo=0';
     console.log(videos);
     console.log(`index${index}`);
 
     return (
       <div>
         <ul className="videoNav" onClick={this.handleClick}>
-          {Object.values(videos)}
+          {Object.keys(videos).map(k => videos[k])}
         </ul>
         <div>
           <iframe
@@ -65,7 +66,7 @@ class Player extends Component {
             className="ytPlayer"
             width="560"
             height="315"
-            src={youtube + playlistId + v + index}
+            src={youtube + playlistId + v + index + showInfo}
             frameBorder="0"
             gesture="media"
             allow="encrypted-media"
