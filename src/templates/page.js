@@ -5,7 +5,9 @@ export default function Template({ data }) {
   const { markdownRemark: page } = data;
   return (
     <div className="pageContainer">
-      <div className="sidebar">{page.frontmatter.playlist ? <Player /> : null}</div>
+      <div className="sidebar">
+        {page.frontmatter.playlist ? <Player playlist={page.frontmatter.playlist} /> : null}
+      </div>
 
       <div className="content">
         <h1 className="pageHeader">{page.frontmatter.heading}</h1>
