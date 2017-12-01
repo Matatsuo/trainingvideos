@@ -1,18 +1,15 @@
 import React from 'react';
 import Player from '../components/player';
+import Sidebar from '../components/sidebar';
+import VideoContainer from '../components/videoContainer';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
   return (
     <div className="pageContainer">
-      <div className="sidebar">
-        {page.frontmatter.playlist ? <Player playlist={page.frontmatter.playlist} /> : null}
-      </div>
-
-      <div className="content">
-        <h1 className="pageHeader">{page.frontmatter.heading}</h1>
-      </div>
-      <div className="sidebar" />
+      {page.frontmatter.playlist ? (
+        <VideoContainer playlist={page.frontmatter.playlist} heading={page.frontmatter.heading} />
+      ) : null}
     </div>
   );
 }
