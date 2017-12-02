@@ -5,7 +5,7 @@ const Sidebar = props => (
     {props.videos.length > 0
       ? props.videos.map(video => (
         <li key={video.index} title={video.index}>
-          {video.title}
+          {video.index}. {video.title}
         </li>
         ))
       : null}
