@@ -20,6 +20,7 @@ class VideoContainer extends Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.handlePlayer = this.handlePlayer.bind(this);
   }
 
   checkStorage() {
@@ -51,8 +52,13 @@ class VideoContainer extends Component {
   }
 
   handleClick(event) {
-    console.log(event.target.title);
     this.setState({ index: event.target.title });
+    // player.playVideoAt(index);
+  }
+
+  handlePlayer(playerIndex) {
+    this.setState({ index: playerIndex });
+    console.log(`vid: ${playerIndex} ${this.state.index}`);
   }
 
   fetchPlaylistVideos() {
@@ -61,7 +67,7 @@ class VideoContainer extends Component {
     const myHeaders = new Headers({
       'Accept-Encoding': 'gzip',
       'User-Agent': 'medimaptraining (gzip)',
-      'Cache-Control': 'public, max-age=36000, max-stale=36000',
+      'Cache-Control': 'public, max-age=36000',
     });
 
     const myInit = {
@@ -97,9 +103,8 @@ class VideoContainer extends Component {
     const {
       playlistData, index, playlist, playlists,
     } = this.state;
-    console.log(playlistData);
     playlists.push(playlistData);
-    console.log(`playlists: ${JSON.stringify(playlists)}`);
+    console.log(`vid${index}`);
 
     return (
       <div>
@@ -111,7 +116,7 @@ class VideoContainer extends Component {
             <div className="content">
               <h1 className="pageHeader">{this.props.heading}</h1>
               <h2 className="videoTitle">{playlistData[{ index }]}</h2>
-              <Player index={index} playlist={playlist} />
+              <Player index={index} playlist={playlist} handlePlayer={this.handlePlayer} />
             </div>
             <div className="sidebar" />
           </div>
