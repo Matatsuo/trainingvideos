@@ -17,7 +17,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <div className="pageContainer">
-        <div>
+        <div className="landingContainer">
           <h1 className="pageHeader">Medi-Map Training</h1>
           <p> Under construction, will look prettier soon</p>
           <p>What works:</p>

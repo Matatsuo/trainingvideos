@@ -110,7 +110,7 @@ class VideoContainer extends Component {
               <Sidebar index={index} videos={playlistData} handleClick={this.handleClick} />
             </div>
             <div className="content">
-              <h1 className="pageHeader">{this.props.heading}</h1>
+              <h1 className="pageHeader">{this.props.heading} Training Videos</h1>
               <h2 className="videoTitle">{playlistData[{ index }]}</h2>
               <Player index={index} playlist={playlist} handlePlayer={this.handlePlayer} />
             </div>

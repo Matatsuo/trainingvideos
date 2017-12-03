@@ -1,6 +1,6 @@
 .sidebar {
   width: 20vw;
-  padding: 2vw;
+  padding: 1vh 2vw;
   align-self: center;
 
   @include extrasmall {
@@ -17,7 +17,7 @@
   }
 
   li {
-    color: black;
+    color: rgb(80, 80, 80);
     text-decoration: none;
     transition: color 0.3s;
 

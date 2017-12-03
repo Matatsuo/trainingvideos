@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.logo-box {
+  padding-top: 2vh;
+}
+
 .logo {
   margin: 0;
   width: 248px;
@@ -23,9 +27,8 @@
     padding: 0;
 
     li {
-      margin-right: 1vw;
+      margin: 1vh 1vw;
       display: inline-block;
-      margin-bottom: 0;
 
       a {
         color: black;
