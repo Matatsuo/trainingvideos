@@ -2,6 +2,18 @@ private restrictions:
 	robots.txt
 	htaccess
 
+page authentication - encode and escape token to prevent XSS | use salt/hash encode key the chosen password for each site, SHA?
+set password: a encrypted encoded message which can only be decoded by having the right password - this way no one can see the real password by looking at the code
+
+
+optimise
+minify css and put css in right folders
+make logo size responsive
+
+
+
+
+
 CMS options:
 
 Headless Wordpress + Gatsby - need two domains? static hosted gatsby site queries a wordpress site

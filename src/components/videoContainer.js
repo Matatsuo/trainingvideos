@@ -6,7 +6,7 @@ const googleApi =
   'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=';
 
 const fields =
-  '&fields=etag%2Citems(etag%2Csnippet(description%2CplaylistId%2Cposition%2CresourceId%2FvideoId%2Ctitle))&key=';
+  '&fields=etag%2Citems(etag%2Csnippet(playlistId%2Cposition%2CresourceId%2FvideoId%2Ctitle))&key=';
 const apiKey = 'AIzaSyBpN0o_sLiSra6RQfFyKlIMx3tQoIjWos8';
 
 class VideoContainer extends Component {
@@ -54,7 +54,6 @@ class VideoContainer extends Component {
   handleClick(event) {
     const sidebarIndex = parseInt(event.target.id);
     this.setState({ index: sidebarIndex });
-    // player.playVideoAt(index);
   }
 
   handlePlayer(playerIndex) {
@@ -95,7 +94,6 @@ class VideoContainer extends Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    // this data is the playlist.list payload, not each page's playlist
     localStorage.setItem(`playlist${this.state.playlist}`, JSON.stringify(nextState.playlistData));
     localStorage.setItem('dataDate', Date.now());
   }
@@ -105,8 +103,6 @@ class VideoContainer extends Component {
       playlistData, index, playlist, playlists,
     } = this.state;
     playlists.push(playlistData);
-    console.log(`vid${index}`);
-
     return (
       <div>
         {playlistData.length > 0 ? (

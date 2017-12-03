@@ -40,6 +40,9 @@ export default class IndexPage extends React.Component {
           <p>What I am working on right now:</p>
           <ul>
             <li>
+              Authorize users by adding a passcode input on the video pages to protect content
+            </li>
+            <li>
               Make youtube api calls on home page so data is immediately rendered on the video pages
               from localStorage
             </li>

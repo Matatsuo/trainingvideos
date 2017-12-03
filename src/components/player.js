@@ -3,17 +3,13 @@ import PropTypes from 'prop-types';
 
 let loadYT;
 const youtube = 'https://www.youtube-nocookie.com/embed/videoseries?list=';
-const v = '&index=';
+// &showinfo=0?ecver=2 or &ytp-pause-overlay=0 for maybe removing suggested videos on pause
+const v = '&rel=0&showinfo=0&index=';
 
 export default class Player extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      player: null,
-    };
-
-    this.onReady = this.onReady.bind(this);
     this.onStateChange = this.onStateChange.bind(this);
   }
 
@@ -38,23 +34,13 @@ export default class Player extends Component {
           autoplay: 0,
         },
         events: {
-          onReady: this.onReady,
           onStateChange: this.onStateChange,
         },
       });
     });
   }
 
-  onReady(event) {
-    console.log(`YouTube Player object for videoId: "${this.state.videoId}" has been saved to state.`);
-    this.setState({
-      player: event.target,
-    });
-  }
-
   onStateChange(event) {
-    // when video in playlist ends on its own
-    // update index state
     if (this.player.getPlayerState() <= 0) {
       const playerIndex = this.player.getPlaylistIndex();
       if (playerIndex !== this.props.index) {
@@ -77,8 +63,9 @@ export default class Player extends Component {
 
   render() {
     return (
-      <div className="playerWrapper">
+      <div className="ytContainer">
         <div
+          className="ytPlayer"
           ref={r => {
             this.youtubePlayer = r;
           }}
