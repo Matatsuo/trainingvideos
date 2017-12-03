@@ -40,6 +40,14 @@ export default class Player extends Component {
     });
   }
 
+  // prevents autoplay on initial load by playingVideoIndex of next prop
+  // playVideoAt(index) autoplays by default
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.index !== this.props.index) {
+      this.player.playVideoAt(nextProps.index);
+    }
+  }
+
   onStateChange(event) {
     if (this.player.getPlayerState() <= 0) {
       const playerIndex = this.player.getPlaylistIndex();
@@ -50,14 +58,6 @@ export default class Player extends Component {
 
     if (typeof this.props.onStateChange === 'function') {
       this.props.onStateChange(event);
-    }
-  }
-
-  // prevents autoplay on initial load by playingVideoIndex of next prop
-  // playVideoAt(index) autoplays by default
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.index !== this.props.index) {
-      this.player.playVideoAt(nextProps.index);
     }
   }
 

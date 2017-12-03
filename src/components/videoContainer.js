@@ -23,13 +23,6 @@ class VideoContainer extends Component {
     this.handlePlayer = this.handlePlayer.bind(this);
   }
 
-  checkStorage() {
-    localStorage.getItem(`playlist${this.state.playlist}`) &&
-      this.setState({
-        playlistData: JSON.parse(localStorage.getItem(`playlist${this.state.playlist}`)),
-      });
-  }
-
   componentDidMount() {
     this.checkStorage();
 
@@ -47,8 +40,20 @@ class VideoContainer extends Component {
     }
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem(`playlist${this.state.playlist}`, JSON.stringify(nextState.playlistData));
+    localStorage.setItem('dataDate', Date.now());
+  }
+
   setPlaylist(playlist) {
     this.setState({ playlist });
+  }
+
+  checkStorage() {
+    localStorage.getItem(`playlist${this.state.playlist}`) &&
+      this.setState({
+        playlistData: JSON.parse(localStorage.getItem(`playlist${this.state.playlist}`)),
+      });
   }
 
   handleClick(event) {
@@ -58,7 +63,6 @@ class VideoContainer extends Component {
 
   handlePlayer(playerIndex) {
     this.setState({ index: playerIndex });
-    console.log(`vid: ${playerIndex} ${this.state.index}`);
   }
 
   fetchPlaylistVideos() {
@@ -91,11 +95,6 @@ class VideoContainer extends Component {
           playlist: playlistData[0].playlistId,
         }))
       .catch(error => console.log('Youtube API failed to fetch data', error));
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem(`playlist${this.state.playlist}`, JSON.stringify(nextState.playlistData));
-    localStorage.setItem('dataDate', Date.now());
   }
 
   render() {

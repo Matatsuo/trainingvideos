@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sidebar = props => (
-  <ul className="videoNav" onClick={props.handleClick}>
+  <ol className="videoNav" onClick={props.handleClick}>
     {props.videos.length > 0
       ? props.videos.map(video => (
         <li
@@ -10,11 +10,11 @@ const Sidebar = props => (
           title={video.index}
           className={props.index == video.index ? 'active' : ''}
         >
-          {video.index}. {video.title}
+          {video.title}
         </li>
         ))
       : null}
-  </ul>
+  </ol>
 );
 
 export default Sidebar;

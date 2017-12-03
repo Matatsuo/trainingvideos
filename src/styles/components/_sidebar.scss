@@ -1,3 +1,36 @@
+.sidebar {
+  width: 20vw;
+  padding: 2vw;
+  align-self: center;
+
+  @include extrasmall {
+    width: 90vw;
+  }
+  @include small {
+    width: 90vw;
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+  }
+
+  li {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: rgb(121, 171, 220);
+    }
+
+    &.active {
+      color: rgb(121, 171, 220);
+    }
+  }
+}
+
 .videoNav {
   cursor: pointer;
 }
