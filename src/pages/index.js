@@ -23,10 +23,15 @@ export default class IndexPage extends React.Component {
           <p>What works:</p>
           <ul>
             <li>
+              Clicking on a video on the sidebar loads the appropriate video in the playlist and
+              highlights which video is playling. This is also updated if the user pushes the
+              previous/next buttons on the Youtube player, or if a video ends and starts the next
+              one. the video player (prev/next buttons)
+            </li>
+            <li>
               Adding/editing videos in the youtube playlists updates the site (sidebar and playlist)
               - so don't have to touch the site unless adding a new page.
             </li>
-            <li>Clicking on the sidebar loads the appropriate video in the playlist</li>
             <li>
               Data is cached so that pages render much faster after first load (next up is to make
               it fast from first load by caching data on home page)
@@ -35,14 +40,10 @@ export default class IndexPage extends React.Component {
           <p>What I am working on right now:</p>
           <ul>
             <li>
-              Show active video in the sidebar - both from clicking on it or from interacting with
-              the video player (prev/next buttons)
-            </li>
-            <li>
               Make youtube api calls on home page so data is immediately rendered on the video pages
               from localStorage
             </li>
-            <li>Styling and responsive layout for all devices comes last</li>
+            <li>Styling and responsive layout for all devices</li>
           </ul>
           <p>Select the relevant training module to begin:</p>
           <div className="customerLinks">

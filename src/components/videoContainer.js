@@ -52,7 +52,8 @@ class VideoContainer extends Component {
   }
 
   handleClick(event) {
-    this.setState({ index: event.target.title });
+    const sidebarIndex = parseInt(event.target.id);
+    this.setState({ index: sidebarIndex });
     // player.playVideoAt(index);
   }
 

@@ -33,7 +33,9 @@ export default class Player extends Component {
         width: this.props.width || 640,
         videoId: youtube + this.props.playlist + v + this.props.index,
         playerVars: {
-          index: this.props.index,
+          rel: 0,
+          showinfo: 0,
+          autoplay: 0,
         },
         events: {
           onReady: this.onReady,
@@ -44,36 +46,36 @@ export default class Player extends Component {
   }
 
   onReady(event) {
-    console.log(
-      `YouTube Player object for videoId: "${this.state.videoId}" has been saved to state.`,
-    );
+    console.log(`YouTube Player object for videoId: "${this.state.videoId}" has been saved to state.`);
     this.setState({
       player: event.target,
     });
   }
 
-  onStateChange = e => {
-    //when video in playlist ends on its own
-    //update index state
+  onStateChange(event) {
+    // when video in playlist ends on its own
+    // update index state
     if (this.player.getPlayerState() <= 0) {
       const playerIndex = this.player.getPlaylistIndex();
-      if (playerIndex != this.props.index) {
-        console.log(playerIndex + ' ' + this.props.index);
+      if (playerIndex !== this.props.index) {
         this.props.handlePlayer(playerIndex);
       }
     }
 
     if (typeof this.props.onStateChange === 'function') {
-      this.props.onStateChange(e);
+      this.props.onStateChange(event);
     }
-  };
+  }
+
+  // prevents autoplay on initial load by playingVideoIndex of next prop
+  // playVideoAt(index) autoplays by default
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.index !== this.props.index) {
+      this.player.playVideoAt(nextProps.index);
+    }
+  }
 
   render() {
-    if (this.state.player) {
-      this.player.playVideoAt(this.props.index);
-    }
-
-    console.log(this.props.playlist + ' ' + this.props.index);
     return (
       <div className="playerWrapper">
         <div
