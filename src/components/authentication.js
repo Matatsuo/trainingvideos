@@ -19,11 +19,12 @@ export default class Authentication extends React.Component {
   }
 
   authenticate(e) {
+    e.preventDefault();
     if (this.state.authToken === this.state.passcode) {
       localStorage.setItem('authToken', this.state.authToken);
+      window.location.reload();
       return true;
     }
-    e.preventDefault();
     this.setState({ error: true });
 
     return false;
