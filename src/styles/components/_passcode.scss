@@ -1,0 +1,64 @@
+.passcodeForm {
+  display: flex;
+  flex-direction: column;
+  min-width: 30vw;
+
+  input {
+    padding: 10px 20px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+
+    &:focus {
+      border-color: rgb(121, 171, 220);
+    }
+
+    &.error {
+      animation: error 0.8s ease;
+      border-color: rgba(168, 15, 15, 1);
+      box-shadow: 0px 0px 2px 1px rgba(168, 15, 15, 1);
+    }
+  }
+
+  label {
+    color: #666;
+    padding: 20px 0;
+  }
+
+  button {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background: rgb(121, 171, 220);
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background: darken(rgb(121, 171, 220), 5%);
+    }
+  }
+}
+
+@keyframes error {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-6px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(6px);
+  }
+}

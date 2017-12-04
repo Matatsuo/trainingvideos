@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoContainer from '../components/videoContainer';
+import Authentication from '../components/authentication';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
@@ -9,7 +10,9 @@ export default function Template({ data }) {
       <VideocContainer> below, else { render <Authentication />}
 */}
 
-      {page.frontmatter.playlist ? (
+      {localStorage.getItem('authToken') === null ? <Authentication /> : null}
+
+      {page.frontmatter.playlist && localStorage.getItem('authToken') ? (
         <VideoContainer playlist={page.frontmatter.playlist} heading={page.frontmatter.heading} />
       ) : null}
     </div>

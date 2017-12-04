@@ -3,6 +3,8 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
   height: 100%;
 }
 
@@ -85,10 +87,6 @@ strong {
 }
 dfn {
   font-style: italic;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 mark {
   background-color: #ff0;
@@ -210,10 +208,6 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-html {
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
 * {
   box-sizing: inherit;
 }
@@ -247,7 +241,7 @@ h1 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 2em;
   line-height: 1.1;
 }
 h2 {
@@ -262,7 +256,7 @@ h2 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 1.62671em;
   line-height: 1.1;
 }
 h3 {
@@ -277,7 +271,7 @@ h3 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1.38316em;
   line-height: 1.1;
 }
 h4 {
@@ -292,7 +286,7 @@ h4 {
   color: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.1;
 }
 hgroup {

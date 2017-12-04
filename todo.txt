@@ -2,8 +2,18 @@ private restrictions:
 	robots.txt
 	htaccess
 
-page authentication - encode and escape token to prevent XSS | use salt/hash encode key the chosen password for each site, SHA?
+page authentication - encode and escape token to prevent XSS | use salt/hash encode key the chosen password for each site, SHA? 
+Sanitize passcode input and localStorage.setItem to prevent scripting attacks
 set password: a encrypted encoded message which can only be decoded by having the right password - this way no one can see the real password by looking at the code
+
+ask if they want the site to be modeled after the medi-map app or the website - pt sans or helvetica, colours, etc.
+different passwords for each page
+
+Backend for authentication:
+	Apollo + Graph Cool for serverless (potentially added directly to Gatsby)
+	Express - would host the back end on a different service - Now.sh, Heroku, Google App Engine, Amazon EC2, (Firebase?) can put server on subdomain and use Netlify's proxying
+	to connect the two: https://www.netlify.com/blog/2016/03/10/go-static-without-losing-your-server/.
+
 
 
 optimise
@@ -11,7 +21,7 @@ minify css and put css in right folders
 make logo size responsive
 
 
-
+IF HOSTING WITH APACHE: watch Wes Bos 28
 
 
 CMS options:
