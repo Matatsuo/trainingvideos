@@ -4,15 +4,14 @@ import Authentication from '../components/authentication';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
+
+  const authToken = typeof window !== 'undefined' && window.localStorage.getItem('authToken');
+
   return (
     <div className="pageContainer">
-      {/* <Authentication page={page.frontmatter.path} />if authenticated do
-      <VideocContainer> below, else { render <Authentication />}
-*/}
+      {authToken === null ? <Authentication /> : null}
 
-      {localStorage.getItem('authToken') === null ? <Authentication /> : null}
-
-      {page.frontmatter.playlist && localStorage.getItem('authToken') ? (
+      {page.frontmatter.playlist && authToken ? (
         <VideoContainer playlist={page.frontmatter.playlist} heading={page.frontmatter.heading} />
       ) : null}
     </div>
