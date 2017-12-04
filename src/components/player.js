@@ -76,8 +76,11 @@ export default class Player extends Component {
 }
 
 Player.propTypes = {
-  videoId: PropTypes.string.required,
+  videoId: PropTypes.string,
   width: PropTypes.number,
   height: PropTypes.number,
   onStateChange: PropTypes.func,
+  handlePlayer: PropTypes.func,
+  playlist: PropTypes.string,
+  index: PropTypes.number,
 };
