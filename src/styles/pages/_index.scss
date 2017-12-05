@@ -1,4 +1,31 @@
 .landingContainer {
-  padding: 2vw;
   text-align: center;
+  align-self: center;
+}
+
+.landingPages {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  border-radius: 5px;
+
+  button {
+    border: 1px solid #999;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 1vw;
+
+    a {
+      text-decoration: none;
+      padding: 2vw;
+    }
+
+    &:hover {
+      transition: 0.3s;
+      background: rgb(251, 251, 251);
+      box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.2);
+    }
+  }
 }

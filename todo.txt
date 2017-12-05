@@ -5,9 +5,11 @@ private restrictions:
 page authentication - encode and escape token to prevent XSS | use salt/hash encode key the chosen password for each site, SHA? 
 Sanitize passcode input and localStorage.setItem to prevent scripting attacks
 set password: a encrypted encoded message which can only be decoded by having the right password - this way no one can see the real password by looking at the code
+different passwords for each page
 
 ask if they want the site to be modeled after the medi-map app or the website - pt sans or helvetica, colours, etc.
-different passwords for each page
+ask if they want a footer
+
 
 add google analytics
 

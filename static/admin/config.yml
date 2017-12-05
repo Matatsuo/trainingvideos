@@ -1,13 +1,13 @@
 backend:
   name: git-gateway
 
-media_folder: "/src/resources/images"
+media_folder: "src/resources/images"
 public_folder: "images"
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "/src/pages/clients"
+    folder: "src/pages/clients"
     create: true
     fields:
       - {label: "Path", name: "path", widget: "string"}

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import { Header } from '../components/header';
+import { Header, Navigation } from '../components/header';
 
 import '../styles/main.scss';
 
@@ -21,6 +21,7 @@ export default ({ children, data }) => (
       script={[{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]}
     />
     <Header pages={data.allMarkdownRemark.edges} />
+
     <main>{children()}</main>
   </div>
 );

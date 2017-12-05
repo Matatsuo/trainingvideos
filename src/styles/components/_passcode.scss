@@ -1,7 +1,6 @@
 .passcodeForm {
   display: flex;
   flex-direction: column;
-  width: 30vw;
   align-self: center;
 
   input {
@@ -30,7 +29,7 @@
 
   button {
     padding: 10px 20px;
-    border-radius: 3px;
+    border-radius: 5px;
     background: rgb(121, 171, 220);
     color: white;
     letter-spacing: 1px;

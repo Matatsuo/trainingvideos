@@ -2,12 +2,18 @@ import React from 'react';
 import Link from 'gatsby-link';
 import logo from '../resources/images/medimap.png';
 
-const ListLink = props => (
-  <li>
-    <Link activeClassName="active" to={props.to}>
-      {props.children}
-    </Link>
-  </li>
+const Navigation = props => (
+  <nav className="navigation">
+    <ul className="nav-list">
+      {props.pages.map(({ node }) => (
+        <li key={node.frontmatter.heading}>
+          <Link activeClassName="active" to={node.frontmatter.path}>
+            {node.frontmatter.heading}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </nav>
 );
 
 const Header = props => (
@@ -17,14 +23,8 @@ const Header = props => (
         <img className="logo" src={logo} alt="medimap-logo" />
       </Link>
     </div>
-    <nav className="navigation">
-      <ul className="nav-list">
-        {props.pages.map(({ node }) => (
-          <ListLink to={node.frontmatter.path}>{node.frontmatter.heading}</ListLink>
-        ))}
-      </ul>
-    </nav>
+    <Navigation pages={props.pages} />
   </header>
 );
 
-export { Header };
+export { Header, Navigation };
