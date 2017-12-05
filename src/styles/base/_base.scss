@@ -19,22 +19,6 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-
-  @include extrasmall {
-    font-size: 1rem;
-  }
-  @include small {
-    font-size: 1.2rem;
-  }
-  @include medium {
-    font-size: 1.2rem;
-  }
-  @include large {
-    font-size: 1.4rem;
-  }
-  @include extralarge {
-    font-size: 1.4rem;
-  }
 }
 article,
 aside,

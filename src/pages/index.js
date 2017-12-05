@@ -17,46 +17,14 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <div className="pageContainer">
+        <h1 className="pageHeader">Medi-Map Training Materials</h1>
         <div className="landingContainer">
-          <h1 className="pageHeader">Medi-Map Training</h1>
-          <p> Under construction, will look prettier soon</p>
-          <p>What works (most recent):</p>
-          <ul>
-            <li>
-              Passcode authentication added to all pages except home page. Right now "test123" is
-              the password for both, but I will implement different passwords for each page.
-              Passcode is currently stored so users dont have to re-enter it (I can choose how long
-              this is stored - mins/hours/days) and they have the option of saving the passcode to
-              the browser (which I can disable at your request).
-            </li>
-            <li>
-              Clicking on a video on the sidebar loads the appropriate video in the playlist and
-              highlights which video is playling. This is also updated if the user pushes the
-              previous/next buttons on the Youtube player, or if a video ends and starts the next
-              one. the video player (prev/next buttons)
-            </li>
-            <li>
-              Adding/editing videos in the youtube playlists updates the site (sidebar and playlist)
-              - so don't have to touch the site unless adding a new page.
-            </li>
-            <li>
-              Page data is cached (saved in storage) so that pages render much faster after first
-              load (next up is to make it fast from first load by caching data on home page)
-            </li>
-          </ul>
-          <p>What I am working on right now:</p>
-          <ul>
-            <li>Add different passwords for different pages</li>
-            <li>
-              Make youtube api calls on home page so data is immediately rendered on the video pages
-              from localStorage
-            </li>
-            <li>Styling and responsive layout for all devices</li>
-          </ul>
-          <p>Select the relevant training module to begin:</p>
-          <div className="customerLinks">
-            <Navigation />
-          </div>
+          <p>What I did:</p>
+          <p>Creating new pages automatically adds it to the header navigation bar</p>
+          <p>Started styling the video pages</p>
+          <p>What I'm doing:</p>
+          <p>Automatically add page links to the home page and style it</p>
+          <div className="customerLinks" />
         </div>
       </div>
     );

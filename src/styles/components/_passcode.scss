@@ -1,7 +1,8 @@
 .passcodeForm {
   display: flex;
   flex-direction: column;
-  min-width: 30vw;
+  width: 30vw;
+  align-self: center;
 
   input {
     padding: 10px 20px;

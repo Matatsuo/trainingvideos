@@ -1,12 +1,14 @@
 .sidebar {
   width: 20vw;
-  padding: 1vh 2vw;
+  padding: 0 2vw;
   align-self: center;
 
   @include extrasmall {
+    padding: 1vw;
     width: 90vw;
   }
   @include small {
+    padding: 1vw;
     width: 90vw;
   }
 
@@ -14,20 +16,36 @@
     margin: 0;
     padding: 0;
     list-style-position: inside;
+    border: 1px solid #999;
+    border-radius: 5px;
   }
 
   li {
     color: rgb(80, 80, 80);
     text-decoration: none;
-    transition: color 0.3s;
+    //transition: color 0.3s;
+    border-bottom: 1px solid #999;
+    margin: 0;
+    padding: 1vw 1vw;
 
     &:hover {
-      color: rgb(121, 171, 220);
+      background: rgb(121, 172, 220);
+      color: white;
     }
 
     &.active {
-      color: rgb(121, 171, 220);
+      color: white;
+      background: rgb(121, 172, 220);
     }
+  }
+}
+
+.sidebar.right {
+  @include extrasmall {
+    display: none;
+  }
+  @include small {
+    display: none;
   }
 }
 

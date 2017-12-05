@@ -7,7 +7,7 @@ const Sidebar = props => (
         <li
           key={video.index}
           id={video.index}
-          title={video.index}
+          title={video.title}
           className={props.index == video.index ? 'active' : ''}
         >
           {video.title}

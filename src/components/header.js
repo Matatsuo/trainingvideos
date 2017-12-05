@@ -10,24 +10,21 @@ const ListLink = props => (
   </li>
 );
 
-const Navigation = () => (
-  <nav className="navigation">
-    <ul className="nav-list">
-      <ListLink to="/hospice/">Hospice</ListLink>
-      <ListLink to="/carefacility/">Care Facility</ListLink>
-    </ul>
-  </nav>
-);
-
-const Header = () => (
+const Header = props => (
   <header className="header">
     <div className="logo-box">
       <Link to="/">
         <img className="logo" src={logo} alt="medimap-logo" />
       </Link>
     </div>
-    <Navigation />
+    <nav className="navigation">
+      <ul className="nav-list">
+        {props.pages.map(({ node }) => (
+          <ListLink to={node.frontmatter.path}>{node.frontmatter.heading}</ListLink>
+        ))}
+      </ul>
+    </nav>
   </header>
 );
 
-export { Header, Navigation };
+export { Header };

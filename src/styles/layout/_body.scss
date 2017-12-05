@@ -1,8 +1,7 @@
 .pageContainer {
   min-height: 80vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .videoContainer {
@@ -19,13 +18,20 @@
 .content {
   width: 60vw;
   text-align: center;
-  padding: 4vh 2vw;
   align-self: center;
 
   @include extrasmall {
+    padding: 1vw;
     width: 90vw;
   }
   @include small {
+    padding: 1vw;
     width: 90vw;
   }
+}
+
+.pageHeader {
+  text-align: center;
+  padding: 2vh;
+  margin: 0;
 }

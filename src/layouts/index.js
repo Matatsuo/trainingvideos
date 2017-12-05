@@ -6,7 +6,7 @@ import { Header } from '../components/header';
 
 import '../styles/main.scss';
 
-const TemplateWrapper = ({ children }) => (
+export default ({ children, data }) => (
   <div>
     <Helmet
       title="Medi-Map Training"
@@ -20,13 +20,22 @@ const TemplateWrapper = ({ children }) => (
       ]}
       script={[{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]}
     />
-    <Header />
+    <Header pages={data.allMarkdownRemark.edges} />
     <main>{children()}</main>
   </div>
 );
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-};
-
-export default TemplateWrapper;
+export const pageQuery = graphql`
+  query pagesQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            heading
+            path
+          }
+        }
+      }
+    }
+  }
+`;

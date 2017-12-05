@@ -9,6 +9,14 @@ set password: a encrypted encoded message which can only be decoded by having th
 ask if they want the site to be modeled after the medi-map app or the website - pt sans or helvetica, colours, etc.
 different passwords for each page
 
+add google analytics
+
+autoprefixer
+
+add markdown to index page and add index page to netlfiy for customization
+
+update page title based on page, e.g. "Hospice | Medi-Map"
+
 Backend for authentication:
 	Apollo + Graph Cool for serverless (potentially added directly to Gatsby)
 	Express - would host the back end on a different service - Now.sh, Heroku, Google App Engine, Amazon EC2, (Firebase?) can put server on subdomain and use Netlify's proxying
@@ -25,13 +33,10 @@ IF HOSTING WITH APACHE: watch Wes Bos 28
 
 
 CMS options:
-
-Headless Wordpress + Gatsby - need two domains? static hosted gatsby site queries a wordpress site
+- Headless Wordpress + Gatsby - need two domains? static hosted gatsby site queries a wordpress site
 thats also hosted somewhere? Pricey potentially?
 
-(Maybe) Wordpress.com (has REST API built in now so no need for plugin? At least could test
+- (Maybe) Wordpress.com (has REST API built in now so no need for plugin? At least could test
 on .com before .org
-
-Grav
-
-Prismic + Gatsby
+- Grav
+- Prismic + Gatsby
