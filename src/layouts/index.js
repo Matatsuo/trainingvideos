@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import { Header, Navigation } from '../components/header';
 
@@ -11,8 +10,7 @@ export default ({ children, data }) => (
     <Helmet
       title="Medi-Map Training"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'robots', content: 'noindex, nofollow' },
         {
           name: 'google-site-verification',
           content: 'w0ZJ1nKHJsEFuwN4fpOYJuyWiV0S2sVip1lq8wiSLow',

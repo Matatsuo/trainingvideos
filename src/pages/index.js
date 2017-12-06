@@ -19,13 +19,11 @@ export default class IndexPage extends React.Component {
       <div className="pageContainer">
         <h1 className="pageHeader">Medi-Map Training Materials</h1>
         <div className="landingContainer">
-          <p>Currently adding:</p>
-          <p>
-            Grid for pages below so they're laid out right on all screen sizes for odd/even no. of
-            pages
-          </p>
-          <p>Styling the pages and tweaking layout</p>
-          <p>To access Medi-Map training materials, select the relevant option below:</p>
+          <div className="landingDescription">
+            <h2>Currently adding:</h2>
+            <p>Fixing grid below. Styling the pages, animations.</p>
+            <p>To access Medi-Map training materials, select the relevant option below:</p>
+          </div>
           <div className="landingPages">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
               <button key={node.frontmatter.heading}>

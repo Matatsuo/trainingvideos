@@ -1,31 +1,71 @@
 .landingContainer {
   text-align: center;
   align-self: center;
+  padding: 0 2vh;
 }
 
 .landingPages {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0;
-  border-radius: 5px;
+  justify-content: space-between;
+
+  @include extrasmall {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @include small {
+  }
+  @include medium {
+  }
+  @include large {
+  }
+  @include extralarge {
+  }
 
   button {
-    border: 1px solid #999;
-    background: rgb(255, 255, 255);
+    border: 1px solid #e1e4e6;
+    background: white;
     border-radius: 5px;
-    margin: 1vw;
+    max-width: 100%;
+    box-shadow: 0px 15px 30px -17px rgba(0, 0, 0, 0.42);
+    flex-basis: 30%;
+    margin-bottom: 3vw;
+
+    @include extrasmall {
+      flex-basis: 100%;
+    }
+
+    @include small {
+      flex-basis: 48%;
+    }
+
+    @include medium {
+    }
+    @include large {
+    }
+    @include extralarge {
+    }
 
     a {
       text-decoration: none;
-      padding: 2vw;
+      padding: 3vw 0;
     }
 
     &:hover {
       transition: 0.3s;
-      background: rgb(251, 251, 251);
+      background: rgb(252, 252, 252);
       box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.2);
     }
+  }
+}
+
+.landingDescription {
+  border: 1px solid #e1e4e6;
+  border-radius: 5px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  p {
+    margin: 0;
   }
 }
