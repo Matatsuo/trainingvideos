@@ -8,25 +8,73 @@
   justify-content: center;
 }
 
-.logo-box {
-  padding-top: 2vh;
-}
-
 .logo {
   margin: 0;
+  max-width: 100%;
+  height: auto;
+  padding: 2vh 0;
+
+  @include extrasmall {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+  }
+  @include small {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%;
+  }
 }
 
 .navigation {
   font-weight: 700;
+  min-width: 50%;
+  margin-bottom: 2vh;
+
+  label {
+    display: none;
+
+    @include extrasmall {
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      padding: 2vh 4vw;
+      background: #eee;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+  .menu-toggle:checked + .nav-list {
+    display: block;
+  }
+
+  label:before {
+    content: "\2630";
+    margin-right: 10px;
+  }
 
   .nav-list {
     list-style: none;
     margin: 0;
-    padding: 0;
+    text-align: center;
+
+    @include extrasmall {
+      display: none;
+    }
 
     li {
-      margin: 1vh 1vw;
+      margin: 0 2vw;
       display: inline-block;
+
+      @include extrasmall {
+        display: block;
+        text-align: left;
+        margin: 2vw 0;
+      }
 
       a {
         color: black;

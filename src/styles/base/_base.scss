@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  background: rgb(245, 245, 245);
   margin: 0;
   color: hsla(0, 0%, 0%, 0.8);
   font-family: "PT Sans", Verdana, sans-serif;
@@ -19,6 +20,13 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+
+  @include large {
+    font-size: 1.1rem;
+  }
+  @include extralarge {
+    font-size: 1.2rem;
+  }
 }
 article,
 aside,
@@ -227,6 +235,13 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2em;
   line-height: 1.1;
+
+  @include extrasmall {
+    font-size: 1.3em;
+  }
+  @include small {
+    font-size: 1.5em;
+  }
 }
 h2 {
   margin-left: 0;

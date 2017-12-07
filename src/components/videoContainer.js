@@ -31,9 +31,15 @@ class VideoContainer extends Component {
     const now = new Date();
 
     const dataAge = Math.round((now - dataDate) / (1000 * 60)); // in minutes
-    const tooOld = dataAge >= 360;
+    const tooOld = dataAge >= 60;
+
+    if (tooOld && date) {
+      localStorage.removeItem('authToken');
+    }
 
     if (tooOld || !localStorage.getItem(`playlist${this.state.playlist}`)) {
+      console.log('fetching');
+      localStorage.setItem('dataDate', Date.now());
       this.fetchPlaylistVideos();
     } else {
       console.log(`Using data from localStorage that is ${dataAge} minutes old (refreshes every 6 hours).`);
@@ -42,7 +48,9 @@ class VideoContainer extends Component {
 
   componentWillUpdate(nextProps, nextState) {
     localStorage.setItem(`playlist${this.state.playlist}`, JSON.stringify(nextState.playlistData));
-    localStorage.setItem('dataDate', Date.now());
+    if (!localStorage.getItem('dataDate')) {
+      localStorage.setItem('dataDate', Date.now());
+    }
   }
 
   setPlaylist(playlist) {

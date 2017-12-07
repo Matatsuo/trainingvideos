@@ -27,9 +27,10 @@
     background: white;
     border-radius: 5px;
     max-width: 100%;
-    box-shadow: 0px 15px 30px -17px rgba(0, 0, 0, 0.42);
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+      1px 3px 8px rgba(39, 44, 49, 0.03);
     flex-basis: 30%;
-    margin-bottom: 3vw;
+    margin-bottom: 4vw;
 
     @include extrasmall {
       flex-basis: 100%;
@@ -39,16 +40,23 @@
       flex-basis: 48%;
     }
 
-    @include medium {
-    }
-    @include large {
-    }
-    @include extralarge {
-    }
-
     a {
       text-decoration: none;
-      padding: 3vw 0;
+      padding: 3vh 0;
+      color: #524d4d;
+      font-weight: 700;
+      font-size: 1.3rem;
+
+      @include medium {
+        padding: 4vh 0;
+      }
+      @include large {
+        padding: 4vh 0;
+      }
+
+      @include extralarge {
+        padding: 4vh 0;
+      }
     }
 
     &:hover {
@@ -62,8 +70,10 @@
 .landingDescription {
   border: 1px solid #e1e4e6;
   border-radius: 5px;
-  padding: 2rem;
+  padding: 2vw;
   margin-bottom: 2rem;
+  min-width: 60vw;
+  background: rgb(255, 255, 255);
 
   p {
     margin: 0;
