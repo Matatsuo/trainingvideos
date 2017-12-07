@@ -7,7 +7,7 @@
 .landingPages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   @include extrasmall {
     flex-wrap: wrap;
@@ -68,7 +68,7 @@
 .landingDescription {
   border: 1px solid #e1e4e6;
   border-radius: 5px;
-  padding: 4vh 2vw;
+  padding: 4vh 4vw;
   margin-bottom: 2vh;
   min-width: 60vw;
   background: rgb(255, 255, 255);

@@ -13,6 +13,8 @@ DO NOW:
 	
 	animations - dfjames
 
+	test adding videsos to playlist
+
 	styling - homepage grid, different font for heading, gray values
 	
 	disable right click for security
@@ -63,4 +65,8 @@ on .com before .org
 - Grav
 - Prismic + Gatsby
 
-additional optional ish: gatsby-plugin-manifest for app icons
+MIGRATION:
+	give access to google api page
+	set up netlify account + netlifycms account
+	potentially github/gitlab account
+	
