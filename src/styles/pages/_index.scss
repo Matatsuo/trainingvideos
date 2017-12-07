@@ -1,7 +1,7 @@
 .landingContainer {
   text-align: center;
   align-self: center;
-  padding: 0 2vh;
+  padding: 0 4vh;
 }
 
 .landingPages {
@@ -24,13 +24,12 @@
 
   button {
     border: 1px solid #e1e4e6;
-    background: white;
+    background: #e65b5b;
     border-radius: 5px;
     max-width: 100%;
-    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-      1px 3px 8px rgba(39, 44, 49, 0.03);
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.15);
     flex-basis: 30%;
-    margin-bottom: 4vw;
+    margin-bottom: 4vh;
 
     @include extrasmall {
       flex-basis: 100%;
@@ -43,7 +42,7 @@
     a {
       text-decoration: none;
       padding: 3vh 0;
-      color: #524d4d;
+      color: white;
       font-weight: 700;
       font-size: 1.3rem;
 
@@ -53,7 +52,6 @@
       @include large {
         padding: 4vh 0;
       }
-
       @include extralarge {
         padding: 4vh 0;
       }
@@ -61,8 +59,8 @@
 
     &:hover {
       transition: 0.3s;
-      background: rgb(252, 252, 252);
-      box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.2);
+      background: darken(#e65b5b, 5%);
+      box-shadow: 8px 8px rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -70,12 +68,29 @@
 .landingDescription {
   border: 1px solid #e1e4e6;
   border-radius: 5px;
-  padding: 2vw;
-  margin-bottom: 2rem;
+  padding: 4vh 2vw;
+  margin-bottom: 2vh;
   min-width: 60vw;
   background: rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
+  @include extrasmall {
+    margin-bottom: 4vh;
+  }
+  @include small {
+    margin-bottom: 4vh;
+  }
+  @include large {
+    font-size: 1.4rem;
+  }
+  @include extralarge {
+    font-size: 1.4rem;
+  }
   p {
     margin: 0;
   }
+}
+
+.pageHeader.landing {
+  padding: 8vh 0;
 }

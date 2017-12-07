@@ -9,7 +9,7 @@ export default function Template({ data }) {
 
   return (
     <div className="pageContainer">
-      <h1 className="pageHeader">{page.frontmatter.heading} Training Videos</h1>
+      <h1 className="pageHeader">{page.frontmatter.heading}</h1>
       {authToken === null ? <Authentication /> : null}
 
       {page.frontmatter.playlist && authToken ? (
