@@ -15,7 +15,6 @@ export default ({ children, data }) => (
           content: 'w0ZJ1nKHJsEFuwN4fpOYJuyWiV0S2sVip1lq8wiSLow',
         },
       ]}
-      script={[{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]}
     />
     <Header pages={data.allMarkdownRemark.edges} />
 

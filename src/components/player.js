@@ -63,6 +63,11 @@ export default class Player extends Component {
   render() {
     return (
       <div className="ytContainer">
+        {this.youtubePlayer ? (
+          <div>
+            <p>Loading...</p>
+          </div>
+        ) : null}
         <div
           className="ytPlayer"
           ref={r => {
