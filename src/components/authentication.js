@@ -21,7 +21,7 @@ export default class Authentication extends React.Component {
   authenticate(e) {
     e.preventDefault();
     if (this.state.authToken === this.state.passcode) {
-      localStorage.setItem('authToken', this.state.authToken);
+      sessionStorage.setItem('authToken', this.state.authToken);
       window.location.reload();
       return true;
     }
@@ -35,9 +35,9 @@ export default class Authentication extends React.Component {
   }
 
   checkStorage() {
-    localStorage.getItem('authToken') &&
+    sessionStorage.getItem('authToken') &&
       this.setState({
-        authToken: localStorage.getItem('authToken'),
+        authToken: sessionStorage.getItem('authToken'),
       });
   }
 

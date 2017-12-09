@@ -5,6 +5,7 @@
 
 .videoContainer {
   display: flex;
+  padding-bottom: 4vh;
 
   @include extrasmall {
     flex-direction: column-reverse;

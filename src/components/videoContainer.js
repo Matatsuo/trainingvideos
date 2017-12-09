@@ -31,11 +31,7 @@ class VideoContainer extends Component {
     const now = new Date();
 
     const dataAge = Math.round((now - dataDate) / (1000 * 60)); // in minutes
-    const tooOld = dataAge >= 60;
-
-    if (tooOld && date) {
-      localStorage.removeItem('authToken');
-    }
+    const tooOld = dataAge >= 360;
 
     if (tooOld || !localStorage.getItem(`playlist${this.state.playlist}`)) {
       console.log('fetching');

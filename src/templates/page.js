@@ -5,7 +5,8 @@ import Authentication from '../components/authentication';
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
 
-  const authToken = typeof window !== 'undefined' && window.localStorage.getItem('authToken');
+  const authToken = typeof window !== 'undefined' && window.sessionStorage.getItem('authToken');
+  console.log(authToken);
 
   return (
     <div className="pageContainer">

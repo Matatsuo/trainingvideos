@@ -17,9 +17,10 @@
     padding: 0;
     list-style-position: inside;
     border: 1px solid #e1e4e6;
-    border-radius: 5px;
+    border-radius: 10px;
     background: rgb(255, 255, 255);
     font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   li {
@@ -33,11 +34,27 @@
     &:hover {
       background: rgb(69, 134, 187);
       color: white;
+
+      &:first-of-type {
+        border-radius: 10px 10px 0 0;
+      }
+
+      &:last-of-type {
+        border-radius: 0 0 10px 10px;
+      }
     }
 
     &.active {
       color: white;
       background: rgb(40, 96, 144);
+
+      &:first-of-type {
+        border-radius: 10px 10px 0 0;
+      }
+
+      &:last-of-type {
+        border-radius: 0 0 10px 10px;
+      }
     }
   }
 }

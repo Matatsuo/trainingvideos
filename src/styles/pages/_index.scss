@@ -8,18 +8,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  animation: slideUp 0.7s 0.3s;
+  animation-fill-mode: both;
 
   @include extrasmall {
     flex-wrap: wrap;
     flex-direction: row;
-  }
-  @include small {
-  }
-  @include medium {
-  }
-  @include large {
-  }
-  @include extralarge {
+    animation: none;
   }
 
   button {
@@ -74,9 +69,12 @@
   min-width: 60vw;
   background: rgb(255, 255, 255);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.7s 0.1s;
+  animation-fill-mode: both;
 
   @include extrasmall {
     margin-bottom: 4vh;
+    animation: none;
   }
   @include small {
     margin-bottom: 4vh;
@@ -94,4 +92,22 @@
 
 .pageHeader.landing {
   padding: 8vh 0;
+  animation: slideUp 0.7s 0.1s;
+  animation-fill-mode: both;
+
+  @include extrasmall {
+    animation: none;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

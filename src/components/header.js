@@ -2,11 +2,15 @@ import React from 'react';
 import Link from 'gatsby-link';
 import logo from '../resources/images/medimap.png';
 
+const menuToggle = e => {
+  document.getElementById('menu-toggle').checked = false;
+};
+
 const Navigation = props => (
   <nav className="navigation">
     <label htmlFor="menu-toggle">Menu</label>
-    <input type="checkbox" className="menu-toggle" id="menu-toggle" value="off" />
-    <ul className="nav-list">
+    <input type="checkbox" className="menu-toggle" id="menu-toggle" />
+    <ul className="nav-list" onClick={menuToggle}>
       {props.pages.map(({ node }) => (
         <li key={node.frontmatter.heading}>
           <Link activeClassName="active" to={node.frontmatter.path}>
