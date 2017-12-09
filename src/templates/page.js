@@ -6,11 +6,14 @@ export default function Template({ data }) {
   const { markdownRemark: page } = data;
 
   const authToken = typeof window !== 'undefined' && window.sessionStorage.getItem('authToken');
+  console.log(`${authToken} : ${page.frontmatter.code}`);
 
   return (
     <div className="pageContainer">
       <h1 className="pageHeader">{page.frontmatter.heading}</h1>
-      {authToken === null ? <Authentication /> : null}
+      {authToken === null || authToken !== page.frontmatter.code ? (
+        <Authentication passcode={page.frontmatter.code} />
+      ) : null}
 
       <div className="videoToggle">
         {page.frontmatter.playlist ? (
@@ -28,6 +31,7 @@ export const pageQuery = graphql`
         path
         heading
         playlist
+        code
       }
     }
   }

@@ -13,3 +13,4 @@ collections:
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Heading", name: "heading", widget: "string"}
       - {label: "Playlist", name: "playlist", widget: "string"}
+      - {label: "Code", name: "code", widget: "string"}

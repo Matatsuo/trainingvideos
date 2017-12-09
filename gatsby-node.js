@@ -14,6 +14,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               path
               heading
               playlist
+              code
             }
           }
         }

@@ -2,10 +2,10 @@ import React from 'react';
 import Passcode from './passcode';
 
 export default class Authentication extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      passcode: 'test123',
+      passcode: props.passcode,
       authToken: '',
       error: false,
     };
@@ -27,7 +27,7 @@ export default class Authentication extends React.Component {
       sessionStorage.setItem('authToken', this.state.authToken);
       // window.location.reload();
       document.getElementsByClassName('passcodeForm')[0].style.display = 'none';
-      document.getElementsByClassName('videoToggle')[0].style.display = 'flex';
+      document.getElementsByClassName('videoToggle')[0].style.display = 'block';
       return true;
     }
     this.setState({ error: true });
