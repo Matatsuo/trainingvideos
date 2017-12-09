@@ -25,8 +25,6 @@ export default class Player extends Component {
     }
     loadYT.then(YT => {
       this.player = new YT.Player(this.youtubePlayer, {
-        height: 390,
-        width: 640,
         videoId: youtube + this.props.playlist + v + this.props.index,
         playerVars: {
           rel: 0,

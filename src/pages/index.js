@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import { Navigation } from '../components/header';
 
 export default class IndexPage extends React.Component {
   componentDidMount() {

@@ -34,11 +34,8 @@ class VideoContainer extends Component {
     const tooOld = dataAge >= 360;
 
     if (tooOld || !localStorage.getItem(`playlist${this.state.playlist}`)) {
-      console.log('fetching');
       localStorage.setItem('dataDate', Date.now());
       this.fetchPlaylistVideos();
-    } else {
-      console.log(`Using data from localStorage that is ${dataAge} minutes old (refreshes every 6 hours).`);
     }
   }
 

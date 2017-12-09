@@ -16,13 +16,18 @@ export default class Authentication extends React.Component {
 
   componentDidMount() {
     this.checkStorage();
+    if (document.getElementsByClassName('videoToggle')) {
+      document.getElementsByClassName('videoToggle')[0].style.display = 'none';
+    }
   }
 
   authenticate(e) {
     e.preventDefault();
     if (this.state.authToken === this.state.passcode) {
       sessionStorage.setItem('authToken', this.state.authToken);
-      window.location.reload();
+      // window.location.reload();
+      document.getElementsByClassName('passcodeForm')[0].style.display = 'none';
+      document.getElementsByClassName('videoToggle')[0].style.display = 'flex';
       return true;
     }
     this.setState({ error: true });
