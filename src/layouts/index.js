@@ -1,13 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Header } from '../components/header';
-import WebFont from 'webfontloader';
-
-WebFont.load({
-  google: {
-    families: ['PT Sans:400,700'],
-  },
-});
 
 import '../styles/main.scss';
 
