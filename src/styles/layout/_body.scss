@@ -1,9 +1,9 @@
-.pageContainer {
+.page-container {
   display: flex;
   flex-direction: column;
 }
 
-.videoContainer {
+.video-container {
   display: flex;
   padding-bottom: 4vh;
 
@@ -16,9 +16,9 @@
 }
 
 .content {
-  width: 60vw;
-  text-align: center;
   align-self: center;
+  text-align: center;
+  width: 60vw;
 
   @include extrasmall {
     padding: 1vw;
@@ -30,9 +30,9 @@
   }
 }
 
-.pageHeader {
-  text-align: center;
-  padding: 4vh 2vw;
-  margin: 0;
+.page-header {
   color: #524d4d;
+  margin: 0;
+  padding: 4vh 2vw;
+  text-align: center;
 }

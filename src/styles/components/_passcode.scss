@@ -1,16 +1,16 @@
-.passcodeForm {
+.passcode-form {
+  align-self: center;
   display: flex;
   flex-direction: column;
-  align-self: center;
   min-width: 20%;
 
   input {
-    padding: 10px 20px;
     border: 1px solid #999;
     border-radius: 5px;
-    margin-bottom: 20px;
     box-sizing: border-box;
+    margin-bottom: 20px;
     outline: none;
+    padding: 10px 20px;
 
     &:focus {
       border-color: rgb(121, 171, 220);
@@ -19,7 +19,7 @@
     &.error {
       animation: error 0.8s ease;
       border-color: rgba(168, 15, 15, 1);
-      box-shadow: 0px 0px 2px 1px rgba(168, 15, 15, 1);
+      box-shadow: 0 0 2px 1px rgba(168, 15, 15, 1);
     }
   }
 
@@ -30,18 +30,18 @@
   }
 
   button {
-    padding: 10px 20px;
-    border-radius: 5px;
     background: rgb(81, 145, 210);
-    color: white;
-    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px -6px rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
     cursor: pointer;
-    box-shadow: 0px 10px 15px -6px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    padding: 10px 20px;
     transition: 0.3s;
 
     &:hover {
-      transition: 0.3s;
       background: darken(rgb(81, 145, 210), 5%);
+      transition: 0.3s;
     }
   }
 }
@@ -51,6 +51,7 @@
   100% {
     transform: translateX(0);
   }
+
   10%,
   30%,
   50%,
@@ -58,6 +59,7 @@
   90% {
     transform: translateX(-6px);
   }
+
   20%,
   40%,
   60%,

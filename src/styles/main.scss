@@ -1,9 +1,11 @@
-@import "helpers/_mixins";
+@import 'helpers/mixins';
 
-@import "base/_base";
+@import 'base/base';
 
-@import "layout/_body", "layout/_header";
+@import 'layout/body', 'layout/header';
 
-@import "pages/_index";
+@import 'pages/index';
 
-@import "components/_sidebar", "components/_player", "components/_passcode";
+@import 'components/sidebar', 'components/player', 'components/passcode';
+
+@import 'vendors/loading';

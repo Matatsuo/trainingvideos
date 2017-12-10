@@ -1,7 +1,7 @@
 .sidebar {
-  width: 20vw;
-  padding: 0 2vw;
   align-self: center;
+  padding: 0 2vw;
+  width: 20vw;
 
   @include extrasmall {
     padding: 1vw;
@@ -13,26 +13,26 @@
   }
 
   ol {
-    margin: 0;
-    padding: 0;
-    list-style-position: inside;
+    background: rgb(255, 255, 255);
     border: 1px solid #e1e4e6;
     border-radius: 10px;
-    background: rgb(255, 255, 255);
-    font-size: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
   }
 
   li {
-    color: rgb(80, 80, 80);
-    text-decoration: none;
     border-bottom: 1px solid #e1e4e6;
+    color: rgb(80, 80, 80);
     margin: 0;
-    padding: 1vw 1vw;
+    padding: 1vw;
+    text-decoration: none;
 
     &:hover {
       background: rgb(69, 134, 187);
-      color: white;
+      color: rgb(255, 255, 255);
 
       &:first-of-type {
         border-radius: 10px 10px 0 0;
@@ -44,8 +44,8 @@
     }
 
     &.active {
-      color: white;
       background: rgb(40, 96, 144);
+      color: rgb(255, 255, 255);
 
       &:first-of-type {
         border-radius: 10px 10px 0 0;
@@ -67,6 +67,6 @@
   }
 }
 
-.videoNav {
+.video-nav {
   cursor: pointer;
 }

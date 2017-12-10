@@ -1,18 +1,18 @@
 .header {
+  align-items: center;
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid #e0e0e0;
-  min-height: 15vh;
-  align-items: center;
+  box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: rgba(30, 50, 50, 0.25) 0 0.05em 0.5em;
+  min-height: 15vh;
 }
 
 .logo {
+  height: auto;
   margin: 0;
   max-width: 100%;
-  height: auto;
   padding: 2vh 0;
 
   @include extrasmall {
@@ -31,31 +31,32 @@
 
 .navigation {
   font-weight: 700;
-  min-width: 50%;
   margin-bottom: 2vh;
+  min-width: 50%;
 
   label {
     display: none;
 
     @include extrasmall {
+      background: #eee;
+      border-radius: 3px;
       cursor: pointer;
       display: block;
       margin: 0;
       padding: 1vh 4vw;
-      background: #eee;
-      border-radius: 3px;
     }
   }
 
   .menu-toggle {
     display: none;
   }
+
   .menu-toggle:checked + .nav-list {
     display: block;
   }
 
   label:before {
-    content: "\2630";
+    content: '\2630';
     margin-right: 10px;
   }
 
@@ -65,26 +66,41 @@
     text-align: center;
 
     @include extrasmall {
-      display: none;
       border-radius: 0 0 5px 5px;
       color: inherit;
+      display: none;
     }
 
     li {
-      margin: 0 2vw;
       display: inline-block;
+      margin: 0 2vw;
 
       @include extrasmall {
         display: block;
-        text-align: left;
         margin: 0;
+        text-align: left;
       }
 
       a {
         color: black;
+        display: block;
         text-decoration: none;
         transition: color 0.4s;
-        display: block;
+
+        @include extrasmall {
+          color: inherit;
+          padding: 1vw 4vw;
+
+          &:hover {
+            background: #f6f7f7;
+            color: inherit;
+          }
+
+          &.active {
+            background: #f6f7f7;
+            color: inherit;
+          }
+        }
 
         &:hover {
           color: #ff1200;
@@ -92,20 +108,6 @@
 
         &.active {
           color: #ff1200;
-        }
-
-        @include extrasmall {
-          padding: 1vw 4vw;
-          color: inherit;
-
-          &:hover {
-            color: inherit;
-            background: #f6f7f7;
-          }
-          &.active {
-            color: inherit;
-            background: #f6f7f7;
-          }
         }
       }
     }

@@ -106,7 +106,7 @@ class VideoContainer extends Component {
     return (
       <div>
         {playlistData.length > 0 ? (
-          <div className="videoContainer">
+          <div className="video-container">
             <div className="sidebar left">
               <Sidebar index={index} videos={playlistData} handleClick={this.handleClick} />
             </div>

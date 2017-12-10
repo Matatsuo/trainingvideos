@@ -16,8 +16,8 @@ export default class Authentication extends React.Component {
 
   componentDidMount() {
     this.checkStorage();
-    if (document.getElementsByClassName('videoToggle')) {
-      document.getElementsByClassName('videoToggle')[0].style.display = 'none';
+    if (document.getElementsByClassName('video-toggle')) {
+      document.getElementsByClassName('video-toggle')[0].style.display = 'none';
     }
   }
 
@@ -26,8 +26,8 @@ export default class Authentication extends React.Component {
     if (this.state.authToken === this.state.passcode) {
       sessionStorage.setItem('authToken', this.state.authToken);
       // window.location.reload();
-      document.getElementsByClassName('passcodeForm')[0].style.display = 'none';
-      document.getElementsByClassName('videoToggle')[0].style.display = 'block';
+      document.getElementsByClassName('passcode-form')[0].style.display = 'none';
+      document.getElementsByClassName('video-toggle')[0].style.display = 'block';
       return true;
     }
     this.setState({ error: true });

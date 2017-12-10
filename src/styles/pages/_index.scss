@@ -1,46 +1,57 @@
-.landingContainer {
-  text-align: center;
+.landing-container {
   align-self: center;
   padding: 0 4vh;
+  text-align: center;
 }
 
-.landingPages {
+.landing-pages {
+  animation: slideUp 0.7s 0.3s;
+  animation-fill-mode: both;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  animation: slideUp 0.7s 0.3s;
-  animation-fill-mode: both;
 
   @include extrasmall {
-    flex-wrap: wrap;
-    flex-direction: row;
     animation: none;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   button {
-    border: 1px solid #e1e4e6;
     background: #e65b5b;
+    border: 1px solid #e1e4e6;
     border-radius: 5px;
-    max-width: 100%;
     box-shadow: 8px 8px rgba(0, 0, 0, 0.15);
     flex-basis: 30%;
     margin-bottom: 4vh;
+    max-width: 100%;
     transition: 0.3s;
 
+    //!important ensures <= 2 buttons means 100% not 48% width
     @include extrasmall {
-      flex-basis: 100%;
+      flex-basis: 100% !important;
     }
 
     @include small {
       flex-basis: 48%;
     }
 
+    &:nth-last-child(2):first-child,
+    &:nth-last-child(2):first-child ~ button {
+      flex-basis: 48%;
+    }
+
+    &:nth-last-child(1):first-child,
+    &:nth-last-child(1):first-child ~ button {
+      flex-basis: 100%;
+    }
+
     a {
-      text-decoration: none;
-      padding: 3vh 0;
-      color: white;
-      font-weight: 700;
+      color: rgb(255, 255, 255);
       font-size: 1.3rem;
+      font-weight: 700;
+      padding: 3vh 0;
+      text-decoration: none;
 
       @include medium {
         padding: 4vh 0;
@@ -54,27 +65,27 @@
     }
 
     &:hover {
-      transition: 0.3s;
       background: darken(#e65b5b, 5%);
-      box-shadow: 0px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0 rgba(0, 0, 0, 0.15);
+      transition: 0.3s;
     }
   }
 }
 
-.landingDescription {
-  border: 1px solid #e1e4e6;
-  border-radius: 5px;
-  padding: 4vh 4vw;
-  margin-bottom: 2vh;
-  min-width: 60vw;
-  background: rgb(255, 255, 255);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.landing-description {
   animation: slideUp 0.7s 0.1s;
   animation-fill-mode: both;
+  background: rgb(255, 255, 255);
+  border: 1px solid #e1e4e6;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2vh;
+  min-width: 60vw;
+  padding: 4vh 4vw;
 
   @include extrasmall {
-    margin-bottom: 4vh;
     animation: none;
+    margin-bottom: 4vh;
   }
   @include small {
     margin-bottom: 4vh;
@@ -85,15 +96,16 @@
   @include extralarge {
     font-size: 1.4rem;
   }
+
   p {
     margin: 0;
   }
 }
 
-.pageHeader.landing {
-  padding: 8vh 0;
+.page-header.landing {
   animation: slideUp 0.7s 0.1s;
   animation-fill-mode: both;
+  padding: 8vh 0;
 
   @include extrasmall {
     animation: none;

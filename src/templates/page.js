@@ -6,16 +6,15 @@ export default function Template({ data }) {
   const { markdownRemark: page } = data;
 
   const authToken = typeof window !== 'undefined' && window.sessionStorage.getItem('authToken');
-  console.log(`${authToken} : ${page.frontmatter.code}`);
 
   return (
-    <div className="pageContainer">
-      <h1 className="pageHeader">{page.frontmatter.heading}</h1>
+    <div className="page-container">
+      <h1 className="page-header">{page.frontmatter.heading}</h1>
       {authToken === null || authToken !== page.frontmatter.code ? (
         <Authentication passcode={page.frontmatter.code} />
       ) : null}
 
-      <div className="videoToggle">
+      <div className="video-toggle">
         {page.frontmatter.playlist ? (
           <VideoContainer playlist={page.frontmatter.playlist} heading={page.frontmatter.heading} />
         ) : null}

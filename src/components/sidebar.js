@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Sidebar = props => (
-  <ol className="videoNav" onClick={props.handleClick}>
+  <ol className="video-nav" onClick={props.handleClick}>
     {props.videos.length > 0
       ? props.videos.map(video => (
         <li
