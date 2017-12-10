@@ -4,6 +4,16 @@ import { Header } from '../components/header';
 
 import '../styles/main.scss';
 
+if (typeof window !== 'undefined') {
+  const WebFont = require('webfontloader');
+  WebFont.load({
+    google: {
+      families: ['PT Sans:400,700'],
+    },
+    timeout: 2000,
+  });
+}
+
 export default ({ children, data }) => (
   <div>
     <Helmet
