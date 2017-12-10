@@ -11,7 +11,8 @@
     "gatsby-plugin-preact": "^1.0.13",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-source-filesystem": "^1.5.9",
-    "gatsby-transformer-remark": "^1.7.23"
+    "gatsby-transformer-remark": "^1.7.23",
+    "webfontloader": "^1.6.28"
   },
   "keywords": [
     "gatsby"
