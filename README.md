@@ -26,12 +26,16 @@ gatsby serve
 
 ## Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)] https://app.netlify.com/start/deploy?repository=https://github.com/ (your repo directory here)
+https://app.netlify.com/start/deploy?repository=https://github.com/ (your repo directory here)
 
 Just add on the git directory to the end of that link and it will immediately generate the site on the server.
 All you need to do from there is:
-Go into Site settings: - Build and Deploy - Post Processing then enable "Asset optimization" to reduce payload size and increase load speed. - Domain management - add your domain (click on "Change your domain's nameservers and add them), once added enable HTTPS below
-and get the certificate. Then under that "Force HTTPS" - Identity - enable "Identity service" and set to Invite only, then at the bottom enable git gateway which allows for the NetlifyCMS.
+Go into Site settings:
+
+* Build and Deploy - Post Processing then enable "Asset optimization" to reduce payload size and increase load speed
+* Domain management - add your domain (click on "Change your domain's nameservers and add them), once added enable HTTPS below
+  and get the certificate. Then under that "Force HTTPS"
+* Identity - enable "Identity service" and set to Invite only, then at the bottom enable git gateway which allows for the NetlifyCMS.
 
 Netlify is designed specifically for these static site generators. It's
 extremely fast, free (premium plans moslty add support and more users), includes
