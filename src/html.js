@@ -24,12 +24,10 @@ module.exports = class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
-
           {this.props.headComponents}
           {css}
         </head>
         <body {...this.props.bodyAttributes}>
-          <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" />
           {this.props.preBodyComponents}
           <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
