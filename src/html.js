@@ -23,12 +23,14 @@ module.exports = class HTML extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-          <link
-            href="https://fonts.googleapis.com/css?family=PT+Sans:400,700"
-            as="font"
-            rel="stylesheet"
-            crossOrigin="anonymous"
-          />
+          <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+          <script>
+            WebFont.load({
+              google: {
+                families: ['PT Sans: 400, 700',]
+              }
+            });
+          </script>
           <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
           {this.props.headComponents}
           {css}
