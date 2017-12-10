@@ -11,11 +11,9 @@ html {
 body {
   background: rgb(245, 245, 245);
   color: hsla(0, 0%, 0%, 0.8);
+  font-display: swap;
   font-family: 'PT Sans', 'Segoe UI', Helvetica, 'system-ui', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Helvetica Neue', 'sans-serif';
-  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-kerning: normal;
   font-weight: normal;

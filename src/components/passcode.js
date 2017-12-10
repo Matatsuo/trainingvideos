@@ -2,7 +2,7 @@ import React from 'react';
 
 const Passcode = props => (
   <form className="passcode-form" method="POST" action="" autoComplete="false">
-    <label>Passcode</label>
+    <label htmlFor="passcode">Passcode</label>
     <input
       type="password"
       name="passcode"

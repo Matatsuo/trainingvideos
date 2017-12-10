@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Passcode from './passcode';
 
 export default class Authentication extends React.Component {
@@ -56,3 +57,7 @@ export default class Authentication extends React.Component {
     );
   }
 }
+
+Authentication.propTypes = {
+  passcode: PropTypes.string.isRequired,
+};
