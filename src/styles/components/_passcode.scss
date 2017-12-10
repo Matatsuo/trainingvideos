@@ -4,6 +4,16 @@
   flex-direction: column;
   min-width: 20%;
 
+  .secure-font {
+    -webkit-text-security: disc;
+
+    &.error {
+      animation: error 0.8s ease;
+      border-color: rgba(168, 15, 15, 1);
+      box-shadow: 0 0 2px 1px rgba(168, 15, 15, 1);
+    }
+  }
+
   input {
     border: 1px solid #999;
     border-radius: 5px;
@@ -14,12 +24,6 @@
 
     &:focus {
       border-color: rgb(121, 171, 220);
-    }
-
-    &.error {
-      animation: error 0.8s ease;
-      border-color: rgba(168, 15, 15, 1);
-      box-shadow: 0 0 2px 1px rgba(168, 15, 15, 1);
     }
   }
 

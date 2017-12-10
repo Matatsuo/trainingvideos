@@ -11,10 +11,7 @@
     "gatsby-plugin-preact": "^1.0.13",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-source-filesystem": "^1.5.9",
-    "gatsby-transformer-remark": "^1.7.23",
-    "stylelint": "^8.3.1",
-    "stylelint-order": "^0.8.0",
-    "stylelint-scss": "^2.2.0"
+    "gatsby-transformer-remark": "^1.7.23"
   },
   "keywords": [
     "gatsby"
