@@ -4,8 +4,9 @@ import { Header } from '../components/header';
 
 import '../styles/main.scss';
 
+let WebFont;
 if (typeof window !== 'undefined') {
-  const WebFont = require('webfontloader');
+  WebFont = require('webfontloader');
   WebFont.load({
     google: {
       families: ['PT Sans:400,700'],
