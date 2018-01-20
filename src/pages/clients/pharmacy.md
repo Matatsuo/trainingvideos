@@ -1,8 +1,8 @@
 ---
-path: '/carefacility'
-heading: 'Care Facility'
-playlist: 'PLFP_4LMrnuUQXY7hGvTYpzDL9haePIX5k'
-code: 'indigoset331'
+path: '/pharmacy'
+heading: 'Pharmacy'
+playlist: ''
+code: 'Pharmacy1'
 ---
 
 Video page under construction. Follow the below link to see training materials.

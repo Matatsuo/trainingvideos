@@ -19,6 +19,11 @@ export default class Authentication extends React.Component {
     this.checkStorage();
     if (document.getElementsByClassName('video-toggle')) {
       document.getElementsByClassName('video-toggle')[0].style.display = 'none';
+      document.getElementsByClassName('page-header')[0].style.padding = '8vh 4vh';
+    }
+
+    if (document.getElementsByClassName('page-content')) {
+      document.getElementsByClassName('page-content')[0].style.display = 'none';
     }
   }
 
@@ -29,6 +34,8 @@ export default class Authentication extends React.Component {
       // window.location.reload();
       document.getElementsByClassName('passcode-form')[0].style.display = 'none';
       document.getElementsByClassName('video-toggle')[0].style.display = 'block';
+      document.getElementsByClassName('page-content')[0].style.display = 'block';
+      document.getElementsByClassName('page-header')[0].style.padding = '4vh';
       return true;
     }
     this.setState({ error: true });

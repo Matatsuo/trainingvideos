@@ -23,7 +23,7 @@ export default class IndexPage extends React.Component {
           </div>
           <div className="landing-pages">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <button key={node.frontmatter.heading}>
+              <button className="button-page" key={node.frontmatter.heading}>
                 <Link
                   style={{ display: 'block', height: '100%' }}
                   activeClassName="active"
