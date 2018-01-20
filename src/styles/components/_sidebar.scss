@@ -14,9 +14,7 @@
 
   ol {
     background: rgb(255, 255, 255);
-    border: 1px solid #e1e4e6;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     list-style-position: inside;
     margin: 0;
@@ -31,29 +29,12 @@
     text-decoration: none;
 
     &:hover {
-      background: rgb(69, 134, 187);
-      color: rgb(255, 255, 255);
-
-      &:first-of-type {
-        border-radius: 10px 10px 0 0;
-      }
-
-      &:last-of-type {
-        border-radius: 0 0 10px 10px;
-      }
+      background-color: rgba(31, 116, 190, 0.15);
     }
 
     &.active {
-      background: rgb(40, 96, 144);
+      background-color: rgb(40, 96, 144);
       color: rgb(255, 255, 255);
-
-      &:first-of-type {
-        border-radius: 10px 10px 0 0;
-      }
-
-      &:last-of-type {
-        border-radius: 0 0 10px 10px;
-      }
     }
   }
 }
