@@ -1,10 +1,10 @@
-.container-passcode {
+.passcode-form {
   align-self: center;
   display: flex;
   flex-direction: column;
   min-width: 20%;
 
-  .passcode {
+  .secure-font {
     -webkit-text-security: disc;
 
     &.error {

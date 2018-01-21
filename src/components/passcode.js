@@ -1,13 +1,22 @@
 import React from 'react';
 
 const Passcode = props => (
-  <div className="container-passcode">
-    <label htmlFor="passcode">Passcode</label>
+  <form
+    className="passcode-form"
+    method="POST"
+    action=""
+    autoComplete="false"
+    autoCapitalize="none"
+    autoCorrect="off"
+    spellCheck="false"
+    role="presentation"
+  >
+    <label htmlFor="secure-font">Passcode</label>
     <input
       type="text"
       name="pass"
       onChange={props.handleChange}
-      className={`passcode ${props.error === true ? 'error' : ''}`}
+      className={`secure-font ${props.error === true ? 'error' : ''}`}
       placeholder="Enter passcode"
       autoComplete="off"
       autoCapitalize="none"
@@ -15,7 +24,7 @@ const Passcode = props => (
       spellCheck="false"
     />
     <button onClick={props.authenticate}>Authenticate</button>
-  </div>
+  </form>
 );
 
 export default Passcode;
