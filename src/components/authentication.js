@@ -29,7 +29,7 @@ export default class Authentication extends React.Component {
 
   authenticate(e) {
     e.preventDefault();
-    if (this.state.authToken === this.state.passcode) {
+    if (this.state.authToken.toLowerCase() === this.state.passcode.toLowerCase()) {
       sessionStorage.setItem('authToken', this.state.authToken);
       // window.location.reload();
       document.getElementsByClassName('passcode-form')[0].style.display = 'none';

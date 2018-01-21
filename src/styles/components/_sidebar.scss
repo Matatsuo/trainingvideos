@@ -1,6 +1,7 @@
 .sidebar {
   align-self: center;
   padding: 0 2vw;
+  user-select: none;
   width: 20vw;
 
   @include extrasmall {
