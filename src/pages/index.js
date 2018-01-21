@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
         <h1 className="page-header landing">Training Materials</h1>
         <div className="landing-container">
           <div className="landing-description">
-            <p>To access Medi-Map training materials, select the relevant option below:</p>
+            <p>To access Medi-Map training materials please select the relevant option below:</p>
           </div>
           <div className="landing-pages">
             {this.props.data.allMarkdownRemark.edges.map(({ node }) => (

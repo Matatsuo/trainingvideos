@@ -10,6 +10,9 @@ const Passcode = props => (
       className={`secure-font ${props.error === true ? 'error' : ''}`}
       placeholder="Enter passcode"
       autoComplete="off"
+      autoCapitalize="none"
+      autoCorrect="off"
+      spellCheck="false"
     />
     <button onClick={props.authenticate}>Authenticate</button>
   </form>

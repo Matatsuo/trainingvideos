@@ -1,8 +1,8 @@
 .button-page {
   background: #e65b5b;
-  border: 1px solid #e1e4e6;
+  border: 1px solid transparent;
   border-radius: 5px;
-  box-shadow: 8px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.35);
   flex-basis: 30%;
   margin-bottom: 4vh;
   max-width: 100%;
@@ -26,34 +26,37 @@
 
   a {
     color: rgb(255, 255, 255);
-    font-size: 1.3rem;
     font-weight: 700;
+    letter-spacing: 0.05em;
     padding: 3vh 0;
     text-decoration: none;
 
     @include medium {
+      font-size: 1.2rem;
       padding: 4vh 0;
     }
     @include large {
+      font-size: 1.3rem;
       padding: 4vh 0;
     }
     @include extralarge {
+      font-size: 1.3rem;
       padding: 4vh 0;
     }
   }
 
   &:hover {
     background: darken(#e65b5b, 5%);
-    box-shadow: 0 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.45);
     transition: 0.3s;
   }
 }
 
 .button-temp {
   background: #e65b5b;
-  border: 1px solid #e1e4e6;
+  border: 1px solid transparent;
   border-radius: 5px;
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.35);
   transition: 0.3s;
 
   a {
@@ -77,7 +80,7 @@
 
   &:hover {
     background: darken(#e65b5b, 5%);
-    box-shadow: 0 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.45);
     transition: 0.3s;
   }
 }

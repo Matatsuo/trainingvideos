@@ -1,7 +1,7 @@
 ---
 path: '/pharmacy'
 heading: 'Pharmacy'
-playlist: ''
+playlist: 'PLFP_4LMrnuUQJYtfW9JHb2Z32unRiugNc'
 code: 'Pharmacy1'
 ---
 
