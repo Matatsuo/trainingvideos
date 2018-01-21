@@ -12,7 +12,7 @@ export default function Template({ data }) {
     <div className="page-container">
       <Helmet title={`Medi-Map Training | ${page.frontmatter.heading}`} />
       <h1 className="page-header">{page.frontmatter.heading}</h1>
-      {authToken === null || authToken.toLowerCase() !== page.frontmatter.code.toLowerCase() ? (
+      {authToken === null || authToken !== page.frontmatter.code.toLowerCase() ? (
         <Authentication passcode={page.frontmatter.code} />
       ) : null}
 

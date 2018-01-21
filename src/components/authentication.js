@@ -6,7 +6,7 @@ export default class Authentication extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      passcode: props.passcode,
+      passcode: props.passcode.toLowerCase(),
       authToken: '',
       error: false,
     };
@@ -29,7 +29,7 @@ export default class Authentication extends React.Component {
 
   authenticate(e) {
     e.preventDefault();
-    if (this.state.authToken.toLowerCase() === this.state.passcode.toLowerCase()) {
+    if (this.state.authToken === this.state.passcode) {
       sessionStorage.setItem('authToken', this.state.authToken);
       // window.location.reload();
       document.getElementsByClassName('passcode-form')[0].style.display = 'none';
@@ -44,7 +44,7 @@ export default class Authentication extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({ authToken: e.target.value, error: false });
+    this.setState({ authToken: e.target.value.toLowerCase(), error: false });
   }
 
   checkStorage() {
