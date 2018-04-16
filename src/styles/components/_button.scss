@@ -4,6 +4,7 @@
   border-radius: 5px;
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3);
   flex-basis: 30%;
+  font-weight: 700;
   margin-bottom: 4vh;
   max-width: 100%;
   transition: 0.3s;
@@ -21,12 +22,11 @@
   //even page buttons - 2 to a row
   &:nth-last-child(even):first-child,
   &:nth-last-child(even):first-child ~ button {
-    flex-basis: 48%;
+    flex-basis: calc(50% - 2vh);
   }
 
   a {
     color: rgb(255, 255, 255);
-    font-weight: 700;
     letter-spacing: 0.05em;
     padding: 3vh 0;
     text-decoration: none;
