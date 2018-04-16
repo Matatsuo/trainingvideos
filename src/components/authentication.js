@@ -31,7 +31,6 @@ export default class Authentication extends React.Component {
     e.preventDefault();
     if (this.state.authToken === this.state.passcode) {
       sessionStorage.setItem('authToken', this.state.authToken);
-      // window.location.reload();
       document.getElementsByClassName('passcode-form')[0].style.display = 'none';
       document.getElementsByClassName('video-toggle')[0].style.display = 'block';
       document.getElementsByClassName('page-content')[0].style.display = 'block';

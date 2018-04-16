@@ -2,7 +2,7 @@
   background: #e65b5b;
   border: 1px solid transparent;
   border-radius: 5px;
-  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3);
   flex-basis: 30%;
   margin-bottom: 4vh;
   max-width: 100%;
@@ -47,7 +47,7 @@
 
   &:hover {
     background: darken(#e65b5b, 5%);
-    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
     transition: 0.3s;
   }
 }
@@ -56,7 +56,7 @@
   background: #e65b5b;
   border: 1px solid transparent;
   border-radius: 5px;
-  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 
   a {
@@ -80,7 +80,7 @@
 
   &:hover {
     background: darken(#e65b5b, 5%);
-    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
     transition: 0.3s;
   }
 }

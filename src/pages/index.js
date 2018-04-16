@@ -2,17 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 export default class IndexPage extends React.Component {
-  componentDidMount() {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
-  }
   render() {
     return (
       <div className="page-container">

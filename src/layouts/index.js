@@ -4,15 +4,27 @@ import { Header } from '../components/header';
 
 import '../styles/main.scss';
 
-let WebFont;
 if (typeof window !== 'undefined') {
-  WebFont = require('webfontloader');
-  WebFont.load({
-    google: {
-      families: ['PT Sans:400,700'],
-    },
-    timeout: 2000,
-  });
+  if ('fonts' in document) {
+    // Optimization for Repeat Views
+    if (sessionStorage.fontsLoadedCriticalFoftDataUri) {
+      // only stage 2 needed here, the subset isn’t needed anymore
+      document.documentElement.className += ' fonts-loaded-2';
+      // return;
+    } else {
+      document.fonts.load('700 1em PT SansSubset').then(() => {
+        document.documentElement.className += ' fonts-loaded-1';
+        Promise.all([
+          document.fonts.load('400 1em PT Sans'),
+          document.fonts.load('700 1em PT Sans'),
+        ]).then(() => {
+          document.documentElement.className += ' fonts-loaded-2';
+          // Optimization for Repeat Views
+          sessionStorage.fontsLoadedCriticalFoftDataUri = true;
+        });
+      });
+    }
+  }
 }
 
 export default ({ children, data }) => (

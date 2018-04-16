@@ -25,16 +25,12 @@
   border: 1px solid #e1e4e6;
   border-radius: 5px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2vh;
+  margin-bottom: 4vh;
   min-width: 60vw;
   padding: 4vh 4vw;
 
   @include extrasmall {
     animation: none;
-    margin-bottom: 4vh;
-  }
-  @include small {
-    margin-bottom: 4vh;
   }
   @include large {
     font-size: 1.4rem;

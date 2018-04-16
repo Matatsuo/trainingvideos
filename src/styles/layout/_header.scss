@@ -34,7 +34,7 @@
   margin: 0 4vh 2vh;
   min-width: 50%;
 
-  label {
+  .menu {
     display: none;
 
     @include extrasmall {
@@ -42,20 +42,30 @@
       border-radius: 3px;
       cursor: pointer;
       display: block;
+      line-height: 1.4;
       margin: 0;
       padding: 1vh 4vw;
     }
   }
 
   .menu-toggle {
-    display: none;
+    opacity: 0;
+    position: absolute;
   }
 
-  .menu-toggle:checked + .nav-list {
-    display: block;
+  .menu-toggle:checked {
+    & ~ .pages {
+      visibility: visible;
+    }
+
+    & ~ .menu:before {
+      content: '\2A09';
+      margin-right: 10px;
+      padding: 0 1px;
+    }
   }
 
-  label:before {
+  .menu:before {
     content: '\2630';
     margin-right: 10px;
   }
@@ -65,12 +75,6 @@
     margin: 0;
     text-align: center;
 
-    @include extrasmall {
-      border-radius: 0 0 5px 5px;
-      color: inherit;
-      display: none;
-    }
-
     li {
       display: inline-block;
       margin: 0 2vw;
@@ -78,7 +82,6 @@
       @include extrasmall {
         display: block;
         margin: 0;
-        text-align: left;
       }
 
       a {
@@ -89,15 +92,13 @@
 
         @include extrasmall {
           color: inherit;
-          padding: 2vw 4vw;
+          padding-bottom: 2vh;
 
           &:hover {
-            background: #f6f7f7;
             color: inherit;
           }
 
           &.active {
-            background: #f6f7f7;
             color: inherit;
           }
         }
@@ -111,5 +112,31 @@
         }
       }
     }
+  }
+}
+
+@include extrasmall {
+  .pages {
+    background: whitesmoke;
+    height: 100%;
+    left: 0;
+    margin-top: 4vh;
+    overflow: hidden;
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .pages-container {
+    display: flex;
+    justify-content: center;
+    padding: 5.6vh 4vh;
+  }
+
+  .nav-list {
+    color: inherit;
+    font-size: 2rem;
+    text-align: center;
   }
 }

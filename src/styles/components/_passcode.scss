@@ -30,11 +30,14 @@
   label {
     color: #524d4d;
     font-weight: 700;
+    opacity: 0;
     padding: 0 0 20px;
+    position: absolute;
   }
 
   button {
     background: rgb(81, 145, 210);
+    border: 1px solid transparent;
     border-radius: 5px;
     box-shadow: 0 10px 15px -6px rgba(0, 0, 0, 0.2);
     color: rgb(255, 255, 255);
