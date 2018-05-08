@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoContainer from '../components/videoContainer';
 import Authentication from '../components/authentication';
+import Helmet from 'react-helmet';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
@@ -9,8 +10,9 @@ export default function Template({ data }) {
 
   return (
     <div className="page-container">
+      <Helmet title={`Medi-Map Training | ${page.frontmatter.heading}`} />
       <h1 className="page-header">{page.frontmatter.heading}</h1>
-      {authToken === null || authToken !== page.frontmatter.code ? (
+      {authToken === null || authToken !== page.frontmatter.code.toLowerCase() ? (
         <Authentication passcode={page.frontmatter.code} />
       ) : null}
 
@@ -19,6 +21,8 @@ export default function Template({ data }) {
           <VideoContainer playlist={page.frontmatter.playlist} heading={page.frontmatter.heading} />
         ) : null}
       </div>
+
+      <div dangerouslySetInnerHTML={{ __html: page.html }} className="page-content" />
     </div>
   );
 }
@@ -32,6 +36,7 @@ export const pageQuery = graphql`
         playlist
         code
       }
+      html
     }
   }
 `;

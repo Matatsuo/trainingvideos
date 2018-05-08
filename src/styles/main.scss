@@ -1,13 +1,16 @@
 @charset 'utf-8';
 
-@import 'helpers/mixins';
+@import 'helpers/mixins', 'helpers/variables';
 
-@import 'base/base';
+@import 'base/fonts', 'base/base';
 
 @import 'layout/body', 'layout/header';
 
 @import 'pages/index';
 
-@import 'components/sidebar', 'components/player', 'components/passcode';
+@import 'components/sidebar',
+  'components/player',
+  'components/passcode',
+  'components/button';
 
 @import 'vendors/loading';

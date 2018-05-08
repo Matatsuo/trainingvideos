@@ -3,36 +3,22 @@
   flex-direction: column;
 }
 
-.video-container {
-  display: flex;
-  padding-bottom: 4vh;
-
-  @include extrasmall {
-    flex-direction: column-reverse;
-  }
-  @include small {
-    flex-direction: column-reverse;
-  }
-}
-
-.content {
+.page-content {
   align-self: center;
+  padding: 0 2vw;
   text-align: center;
-  width: 60vw;
 
   @include extrasmall {
-    padding: 1vw;
-    width: 90vw;
+    padding: 0 4vh;
   }
   @include small {
-    padding: 1vw;
-    width: 90vw;
+    padding: 0 4vh;
   }
 }
 
 .page-header {
   color: #524d4d;
   margin: 0;
-  padding: 4vh 2vw;
+  padding: 4vh;
   text-align: center;
 }

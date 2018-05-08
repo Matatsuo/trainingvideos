@@ -6,7 +6,7 @@ export default class Authentication extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      passcode: props.passcode,
+      passcode: props.passcode.toLowerCase(),
       authToken: '',
       error: false,
     };
@@ -19,6 +19,11 @@ export default class Authentication extends React.Component {
     this.checkStorage();
     if (document.getElementsByClassName('video-toggle')) {
       document.getElementsByClassName('video-toggle')[0].style.display = 'none';
+      document.getElementsByClassName('page-header')[0].style.padding = '8vh 4vh';
+    }
+
+    if (document.getElementsByClassName('page-content')) {
+      document.getElementsByClassName('page-content')[0].style.display = 'none';
     }
   }
 
@@ -26,9 +31,10 @@ export default class Authentication extends React.Component {
     e.preventDefault();
     if (this.state.authToken === this.state.passcode) {
       sessionStorage.setItem('authToken', this.state.authToken);
-      // window.location.reload();
       document.getElementsByClassName('passcode-form')[0].style.display = 'none';
       document.getElementsByClassName('video-toggle')[0].style.display = 'block';
+      document.getElementsByClassName('page-content')[0].style.display = 'block';
+      document.getElementsByClassName('page-header')[0].style.padding = '4vh';
       return true;
     }
     this.setState({ error: true });
@@ -37,7 +43,7 @@ export default class Authentication extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({ authToken: e.target.value, error: false });
+    this.setState({ authToken: e.target.value.toLowerCase(), error: false });
   }
 
   checkStorage() {

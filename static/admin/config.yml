@@ -14,3 +14,4 @@ collections:
       - {label: "Heading", name: "heading", widget: "string"}
       - {label: "Playlist", name: "playlist", widget: "string"}
       - {label: "Code", name: "code", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

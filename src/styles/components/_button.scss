@@ -1,0 +1,86 @@
+.button-page {
+  background: #e65b5b;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3);
+  flex-basis: 30%;
+  font-weight: 700;
+  margin-bottom: 4vh;
+  max-width: 100%;
+  transition: 0.3s;
+
+  @include extrasmall {
+    flex-basis: 100%;
+  }
+
+  //1 page button - 100% width
+  &:nth-last-child(1):first-child,
+  &:nth-last-child(1):first-child ~ button {
+    flex-basis: 100%;
+  }
+
+  //even page buttons - 2 to a row
+  &:nth-last-child(even):first-child,
+  &:nth-last-child(even):first-child ~ button {
+    flex-basis: calc(50% - 2vh);
+  }
+
+  a {
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.05em;
+    padding: 3vh 0;
+    text-decoration: none;
+
+    @include medium {
+      font-size: 1.2rem;
+      padding: 4vh 0;
+    }
+    @include large {
+      font-size: 1.3rem;
+      padding: 4vh 0;
+    }
+    @include extralarge {
+      font-size: 1.3rem;
+      padding: 4vh 0;
+    }
+  }
+
+  &:hover {
+    background: darken(#e65b5b, 5%);
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+  }
+}
+
+.button-temp {
+  background: #e65b5b;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+
+  a {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-weight: 700;
+    height: 100%;
+    padding: 1vw;
+    text-decoration: none;
+
+    @include extrasmall {
+      padding: 1.5vh 1.5vw;
+    }
+    @include small {
+      padding: 1.5vh 1.5vw;
+    }
+    @include medium {
+      padding: 1.5vh 1.5vw;
+    }
+  }
+
+  &:hover {
+    background: darken(#e65b5b, 5%);
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+  }
+}

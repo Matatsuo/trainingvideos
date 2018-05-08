@@ -1,3 +1,30 @@
+.video-container {
+  display: flex;
+  padding-bottom: 2vh;
+
+  @include extrasmall {
+    flex-direction: column-reverse;
+  }
+  @include small {
+    flex-direction: column-reverse;
+  }
+}
+
+.content {
+  align-self: center;
+  text-align: center;
+  width: 60vw;
+
+  @include extrasmall {
+    padding: 0 4vh 1vh;
+    width: 100%;
+  }
+  @include small {
+    padding: 0 4vh 1vh;
+    width: 100%;
+  }
+}
+
 .yt-container {
   height: 0;
   max-width: 100%;

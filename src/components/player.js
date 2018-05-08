@@ -30,7 +30,7 @@ export default class Player extends Component {
           rel: 0,
           showinfo: 0,
           autoplay: 0,
-          origin: 'http://192.168.0.152:8000',
+          origin: 'https://learn.medimap.co.nz',
         },
         events: {
           onStateChange: this.onStateChange,
